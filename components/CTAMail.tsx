@@ -11,9 +11,9 @@ const CTAMail = () => {
     <section className="text-center pt-80 pb-24">
       <div>
         <h2 className="text-2xl mb-2">Need an impactful design?</h2>
-        <p className="mb-2">I’d be happy to help.</p>
+        <p className="mb-2">{`I'd be happy to help.`}</p>
         <a href="mailto:fflur.page@gmail.com">
-          <Button>Let's talk</Button>
+          <Button>{`Let's talk`}</Button>
         </a>
       </div>
     </section>
