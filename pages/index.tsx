@@ -1,32 +1,46 @@
 import type { NextPage } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Layout from "components/Layout";
 import CTAMail from "components/CTAMail";
 
 const Home: NextPage = () => {
   return (
     <Layout>
-      <section className="pt-40">
-        <div className="text-center">
-          <h1 className="text-3xl mb-4">UI Designer & illustrator</h1>
-          <h2 className="max-w-md mx-auto">
-            I create user-centered interfaces and UI assets to help product
-            teams deliver unique and consistent designs.{" "}
-          </h2>
+      <section className="pt-14">
+        <div className="text-center flex items-center gap-8 flex-col md:flex-row">
+          <div className="flex flex-col h-full text-left basis-5/12">
+            <h1 className="text-3xl mb-4">Product Designer & illustrator</h1>
+            <h2 className="max-w-md mx-auto">
+              I design user-centered interfaces and UI assets to help teams
+              deliver unique and consistent products.
+            </h2>
+          </div>
+          <div className="basis-7/12 w-full">
+            <Image src="/home/Hero_grouped.png" width="2781" height="1929" />
+          </div>
         </div>
         <div className="flex flex-col md:flex-row gap-8 mt-40">
           <div className="flex-1 w-full">
             <Link href="/ui-design">
               <a>
-                <div className="h-80 bg-red-50 rounded-xl mb-2">img</div>
-                <span>UI Design</span>
+                <Image
+                  src="/home/ProductDesign_banner.png"
+                  width="1202"
+                  height="1080"
+                />
+                <span>Product Design</span>
               </a>
             </Link>
           </div>
           <div className="flex-1 w-full">
             <Link href="/illustrations">
               <a>
-                <div className="h-80 bg-red-50 rounded-xl mb-2">img</div>
+                <Image
+                  src="/home/Illustration_banner.png"
+                  width="1202"
+                  height="1080"
+                />
                 <span>Illustration</span>
               </a>
             </Link>
@@ -35,7 +49,7 @@ const Home: NextPage = () => {
       </section>
       <section className="pt-80 flex flex-col md:flex-row gap-8">
         <div className="flex-[0.4]">
-          <div className="">img</div>
+          <Image src="/home/Profil_pic.png" width="1604" height="1492" />
         </div>
         <div className="flex-[0.6]">
           <h2 className="text-2xl mb-4">Hi — Nice to meet you!</h2>

@@ -1,17 +1,18 @@
 import CTAMail from "components/CTAMail";
 import Layout from "components/Layout";
 import Link from "next/link";
+import Image from "next/image";
 
 const ClearFashionPage = () => {
   return (
     <Layout>
-      <nav className="flex mt-10">
+      <nav className="flex mt-4">
         <Link href="/">
           <a className="underline font-semibold">Home</a>
         </Link>
         <span className="px-2">·</span>
         <Link href="/ui-design">
-          <a className="underline font-semibold">UI Design</a>
+          <a className="underline font-semibold">Product Design</a>
         </Link>
         <span className="px-2">·</span>
         <Link href="/ui-design">
@@ -31,10 +32,12 @@ const ClearFashionPage = () => {
         </p>
       </div>
       <div>
-        <div className="w-full h-96 bg-orange-50"></div>
+        <div className="w-full">
+          <Image src={`/cf/CF_banner.png`} width="3229" height="971" />
+        </div>
       </div>
       <SectionImgText
-        img=""
+        img="ProductDesign_banner.png"
         title="The mobile app: Following consumers through their entire shopping journey"
         text={
           <>
@@ -60,7 +63,7 @@ const ClearFashionPage = () => {
       />
       <SectionImgText
         isReverse
-        img=""
+        img="CF_image_2.png"
         title="test"
         text={
           <>
@@ -87,7 +90,7 @@ const ClearFashionPage = () => {
         }
       />
       <SectionImgText
-        img=""
+        img="Widget.gif"
         title="test"
         text={
           <>
@@ -139,7 +142,7 @@ const SectionImgText: React.FC<SectionImgTextProps> = ({
     >
       <div className="flex-[0.4]">
         <div className="">
-          <img src={img} />
+          <Image src={`/cf/${img}`} width={544} height={489} />
         </div>
       </div>
       <div className="flex-[0.6]">

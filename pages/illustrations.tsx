@@ -1,8 +1,21 @@
 import Link from "next/link";
 import Layout from "components/Layout";
 import CTAMail from "components/CTAMail";
+import Image from "next/image";
 
-const mockGallery = [...new Array(6)];
+const gallery = [
+  "Clothes.png",
+  "Scientist.png",
+  "People.png",
+  "Trash.png",
+  "Keys.png",
+  "Box.png",
+  "Tamagotchi.png",
+  "Nokia.png",
+  "Gamecube.png",
+  "Mac.png",
+  "Keyboard.png",
+];
 
 const UIDesignPage = () => {
   return (
@@ -27,9 +40,11 @@ const UIDesignPage = () => {
         </p>
       </div>
       <div className="grid gap-8 md:grid-cols-3">
-        {mockGallery.map((item, index) => {
+        {gallery.map((img, index) => {
           return (
-            <div key={index} className="h-80 rounded-xl bg-emerald-50"></div>
+            <div key={index} className="rounded-xl flex overflow-hidden">
+              <Image src={`/illustration/${img}`} width="800" height="800" />
+            </div>
           );
         })}
       </div>
