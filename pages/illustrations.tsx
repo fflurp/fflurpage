@@ -22,16 +22,16 @@ const UIDesignPage = () => {
     <Layout>
       <nav className="flex mt-10">
         <Link href="/">
-          <a className="underline font-semibold">Home</a>
+          <a className="underline text-base font-title">Home</a>
         </Link>
         <span className="px-2">·</span>
         <Link href="/ui-design">
-          <a>Illustration</a>
+          <a className="text-base font-title">Illustration</a>
         </Link>
       </nav>
       <div className="mt-16 mb-20">
-        <h1 className="text-3xl mb-6">Illustrations</h1>
-        <p>
+        <h1 className="text-5xl font-title mb-6">Illustrations</h1>
+        <p className="text-xl">
           Applied to product design, illustrations play a massive role in
           amplifying or simplifying the messages that are delivered to the
           users. Whether it’s there to make complicated information easier to

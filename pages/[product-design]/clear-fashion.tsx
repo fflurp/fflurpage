@@ -8,20 +8,20 @@ const ClearFashionPage = () => {
     <Layout>
       <nav className="flex mt-4">
         <Link href="/">
-          <a className="underline font-semibold">Home</a>
+          <a className="underline text-base font-title">Home</a>
         </Link>
         <span className="px-2">·</span>
         <Link href="/ui-design">
-          <a className="underline font-semibold">Product Design</a>
+          <a className="underline text-base font-title">Product Design</a>
         </Link>
         <span className="px-2">·</span>
         <Link href="/ui-design">
-          <a>Clear Fashion</a>
+          <a className="text-base font-title">Clear Fashion</a>
         </Link>
       </nav>
       <div className="mt-16 mb-20">
-        <h1 className="text-3xl mb-6">Clear Fashion</h1>
-        <p>
+        <h1 className="text-5xl font-title mb-6">Clear Fashion</h1>
+        <p className="text-xl">
           Clear Fashion is a french, mission-led company that helps consumers
           check fashion brands engagements and analyse garments social and
           environmental impact. I joined the team at an early stage as a Product
@@ -64,7 +64,7 @@ const ClearFashionPage = () => {
       <SectionImgText
         isReverse
         img="CF_image_2.png"
-        title="test"
+        title="The web app: Making information more accessible to consumers"
         text={
           <>
             <p className="mb-2">
@@ -91,7 +91,7 @@ const ClearFashionPage = () => {
       />
       <SectionImgText
         img="Widget.gif"
-        title="test"
+        title="The widgets: A summary of the garment’s evaluation displayed on the brands website."
         text={
           <>
             <p className="mb-2">
@@ -146,8 +146,8 @@ const SectionImgText: React.FC<SectionImgTextProps> = ({
         </div>
       </div>
       <div className="flex-[0.6]">
-        <h2 className="text-2xl mb-4">{title}</h2>
-        {text}
+        <h2 className="text-3xl font-title mb-8">{title}</h2>
+        <div className="text-lg">{text}</div>
       </div>
     </section>
   );

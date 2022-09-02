@@ -16,18 +16,25 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                 <div className="w-8 mr-4">
                   <Image src="/home/Icon.png" width="182" height="266" />
                 </div>
-                <span className="uppercase font-bold">Fflur page</span>
+                <span className="uppercase text-sm font-title-bold">
+                  Fflur page
+                </span>
               </div>
             </a>
           </Link>
           <div>
             <Link href="/product-design">
-              <a className="mr-10">Product Design</a>
+              <a className="mr-10 text-sm font-title">Product Design</a>
             </Link>{" "}
             <Link href="/illustrations">
-              <a className="mr-10">Illustration</a>
+              <a className="mr-10 text-sm font-title">Illustration</a>
             </Link>
-            <a target="_blank" rel="noreferrer" className="">
+            <a
+              href="https://medium.com/@fflurpage"
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm font-title"
+            >
               Blog posts
             </a>
           </div>
@@ -35,7 +42,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       </header>
       {children}
       <footer className="flex justify-between mb-10">
-        <div>© Fflur Page {new Date().getFullYear()}</div>
+        <div className="font-title">
+          © Fflur Page {new Date().getFullYear()}
+        </div>
         <div className="flex gap-4">
           <a
             href="https://www.linkedin.com/in/fflurpage/"

@@ -10,8 +10,10 @@ const Home: NextPage = () => {
       <section className="pt-14">
         <div className="text-center flex items-center gap-8 flex-col md:flex-row">
           <div className="flex flex-col h-full text-left basis-5/12">
-            <h1 className="text-3xl mb-4">Product Designer & illustrator</h1>
-            <h2 className="max-w-md mx-auto">
+            <h1 className="text-3xl mb-4 font-display font-title-bold">
+              Product Designer & illustrator
+            </h1>
+            <h2 className="max-w-md mx-auto text-xl">
               I design user-centered interfaces and UI assets to help teams
               deliver unique and consistent products.
             </h2>
@@ -29,7 +31,9 @@ const Home: NextPage = () => {
                   width="1202"
                   height="1080"
                 />
-                <span>Product Design</span>
+                <span className="font-title-bold py-6 px-4 inline-flex text-lg">
+                  Product Design
+                </span>
               </a>
             </Link>
           </div>
@@ -41,7 +45,9 @@ const Home: NextPage = () => {
                   width="1202"
                   height="1080"
                 />
-                <span>Illustration</span>
+                <span className="font-title-bold py-6 px-4 inline-flex text-lg">
+                  Illustration
+                </span>
               </a>
             </Link>
           </div>
@@ -52,12 +58,14 @@ const Home: NextPage = () => {
           <Image src="/home/Profil_pic.png" width="1604" height="1492" />
         </div>
         <div className="flex-[0.6]">
-          <h2 className="text-2xl mb-4">Hi — Nice to meet you!</h2>
-          <p className="mb-2">
+          <h2 className="text-2xl mb-4 font-title-bold">
+            Hi — Nice to meet you!
+          </h2>
+          <p className="mb-4 text-lg">
             I’m Fflur Page, a freelance UI designer & illustrator based in
             Paris.
           </p>
-          <p className="mb-2">
+          <p className="mb-4 text-lg">
             After graduating from HETIC tech school, I worked 2 years as a
             product designer for a french startup. I was involved throughout the
             full design process from discovering users needs to delivering the
@@ -65,7 +73,7 @@ const Home: NextPage = () => {
             that product teams don’t always have the time or ressources to
             create and manage assets efficiently.{" "}
           </p>
-          <p className="mb-2">
+          <p className="mb-4 text-lg">
             To me, UI plays a huge role in enhancing the users experience while
             allowing brands to make a statement. The right components, icon set
             and illustration system will make a product so much more than
