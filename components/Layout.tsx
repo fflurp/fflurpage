@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import React, { forwardRef } from "react";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -7,16 +8,16 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="max-w-screen-lg px-8 mx-auto">
+    <div className="mx-auto max-w-screen-lg px-8">
       <header className="py-6">
-        <nav className="w-full flex justify-between items-center">
+        <nav className="flex w-full items-center justify-between">
           <Link href="/">
             <a>
               <div className="flex items-center">
-                <div className="w-8 mr-4">
+                <div className="mr-4 w-8">
                   <Image src="/home/Icon.png" width="182" height="266" />
                 </div>
-                <span className="uppercase text-sm font-title-bold">
+                <span className="hidden font-title-bold text-sm uppercase sm:block">
                   Fflur page
                 </span>
               </div>
@@ -24,24 +25,26 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </Link>
           <div>
             <Link href="/product-design">
-              <a className="mr-10 text-sm font-title">Product Design</a>
+              <LinkFP className="mr-10 font-title text-sm">
+                Product Design
+              </LinkFP>
             </Link>{" "}
             <Link href="/illustrations">
-              <a className="mr-10 text-sm font-title">Illustration</a>
+              <LinkFP className="mr-10 font-title text-sm">Illustration</LinkFP>
             </Link>
-            <a
+            <LinkFP
               href="https://medium.com/@fflurpage"
               target="_blank"
               rel="noreferrer"
-              className="text-sm font-title"
+              className="font-title text-sm"
             >
-              Blog posts
-            </a>
+              Blog posts{"  ✍️"}
+            </LinkFP>
           </div>
         </nav>
       </header>
       {children}
-      <footer className="flex justify-between mb-10">
+      <footer className="mb-10 flex justify-between">
         <div className="font-title">
           © Fflur Page {new Date().getFullYear()}
         </div>
@@ -72,5 +75,33 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     </div>
   );
 };
+
+type LinkFPProps = {
+  children: React.ReactNode;
+  href?: string;
+  className: string;
+} & React.ComponentPropsWithRef<"a">;
+
+const LinkFP = forwardRef<HTMLAnchorElement, LinkFPProps>(
+  ({ children, className, ...props }, ref) => {
+    return (
+      <a
+        ref={ref}
+        className={`${className}
+          cursor-pointer
+          bg-gradient-to-r from-pink-200 to-purple-200
+          bg-[length:0px_3px]
+          bg-left-bottom
+          bg-no-repeat
+          transition-[background-size]
+          duration-500
+          hover:bg-[length:100%_3px]`}
+        {...props}
+      >
+        {children}
+      </a>
+    );
+  }
+);
 
 export default Layout;
