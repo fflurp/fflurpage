@@ -30,7 +30,7 @@ const Home: NextPage = () => {
         </div>
         <div className="mt-40 flex flex-col gap-8 md:flex-row">
           <div className="w-full flex-1">
-            <Link href="/ui-design">
+            <Link href="/product-design">
               <a>
                 <div className="flex max-h-80 overflow-hidden rounded-tl-3xl rounded-tr-3xl">
                   <img

@@ -25,12 +25,12 @@ const UIDesignPage = () => {
           <a className="font-title text-base">Home</a>
         </Link>
         <span className="px-2">·</span>
-        <Link href="/ui-design">
+        <Link href="/product-design">
           <a className="font-title text-base text-neutral-500">Illustration</a>
         </Link>
       </nav>
       <div className="mt-16 mb-20">
-        <h1 className="mb-6 font-title text-5xl">Illustrations</h1>
+        <h1 className="mb-6 font-title-bold text-5xl">Illustrations</h1>
         <p className="text-xl">
           Applied to product design, illustrations play a massive role in
           amplifying or simplifying the messages that are delivered to the

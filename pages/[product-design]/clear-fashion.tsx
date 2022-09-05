@@ -11,16 +11,16 @@ const ClearFashionPage = () => {
           <a className="font-title text-base ">Home</a>
         </Link>
         <span className="px-2">·</span>
-        <Link href="/ui-design">
+        <Link href="/product-design">
           <a className="font-title text-base">Product Design</a>
         </Link>
         <span className="px-2">·</span>
-        <Link href="/ui-design">
+        <Link href="/product-design">
           <a className="font-title text-base text-neutral-500">Clear Fashion</a>
         </Link>
       </nav>
       <div className="mt-16 mb-20">
-        <h1 className="mb-6 font-title text-5xl">Clear Fashion</h1>
+        <h1 className="mb-6 font-title-bold text-5xl">Clear Fashion</h1>
         <p className="text-xl">
           Clear Fashion is a french, mission-led company that helps consumers
           check fashion brands engagements and analyse garments social and
@@ -141,7 +141,7 @@ const SectionImgText: React.FC<SectionImgTextProps> = ({
         </div>
       </div>
       <div className="flex-[0.6]">
-        <h2 className="mb-8 font-title text-3xl">{title}</h2>
+        <h2 className="mb-8 font-title-bold text-3xl">{title}</h2>
         <div className="text-lg">{text}</div>
       </div>
     </section>

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Layout from "components/Layout";
 import CTAMail from "components/CTAMail";
-import Image from "next/image";
 
 const UIDesignPage = () => {
   return (
@@ -11,14 +10,14 @@ const UIDesignPage = () => {
           <a className="font-title text-base">Home</a>
         </Link>
         <span className="px-2">·</span>
-        <Link href="/ui-design">
+        <Link href="/product-design">
           <a className="font-title text-base text-neutral-500">
             Product Design
           </a>
         </Link>
       </nav>
       <div className="mt-16 mb-20">
-        <h1 className="mb-6 font-title text-5xl">Product Design</h1>
+        <h1 className="mb-6 font-title-bold text-5xl">Product Design</h1>
         <p className="text-xl">
           Coming from a product/tech background, I consider usability and
           consistency to be key elements when it comes to design. First of all,
@@ -33,7 +32,7 @@ const UIDesignPage = () => {
       <div className="mb-20">
         <div className="grid gap-8 md:grid-cols-3">
           <div className="w-full">
-            <Link href="/ui-design/clear-fashion">
+            <Link href="/product-design/clear-fashion">
               <a>
                 <div className="flex h-full max-h-80 overflow-hidden rounded-tl-3xl rounded-tr-3xl">
                   <img
@@ -49,7 +48,7 @@ const UIDesignPage = () => {
             </Link>
           </div>
           <div className="w-full">
-            <Link href="/ui-design/clear-fashion">
+            <Link href="/product-design/clear-fashion">
               <a className="cursor-wait opacity-75">
                 <div className="flex h-full max-h-80 overflow-hidden rounded-tl-3xl rounded-tr-3xl">
                   <img
