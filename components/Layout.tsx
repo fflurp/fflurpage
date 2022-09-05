@@ -14,8 +14,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           <Link href="/">
             <a>
               <div className="flex items-center">
-                <div className="mr-4 w-8">
-                  <Image src="/home/Icon.png" width="182" height="266" />
+                <div className="mr-0 w-8 sm:mr-4">
+                  <Image
+                    src="/home/Icon.png"
+                    width="182"
+                    height="266"
+                    alt="icon"
+                  />
                 </div>
                 <span className="hidden font-title-bold text-sm uppercase sm:block">
                   Fflur page
@@ -25,18 +30,20 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </Link>
           <div>
             <Link href="/product-design">
-              <LinkFP className="mr-10 font-title text-sm">
+              <LinkFP className="mr-4 font-title text-[12px] sm:mr-10 sm:text-sm">
                 Product Design
               </LinkFP>
-            </Link>{" "}
+            </Link>
             <Link href="/illustrations">
-              <LinkFP className="mr-10 font-title text-sm">Illustration</LinkFP>
+              <LinkFP className="mr-4 font-title text-[12px] sm:mr-10 sm:text-sm">
+                Illustration
+              </LinkFP>
             </Link>
             <LinkFP
               href="https://medium.com/@fflurpage"
               target="_blank"
               rel="noreferrer"
-              className="font-title text-sm"
+              className="font-title text-[12px] sm:text-sm"
             >
               Blog posts{"  ✍️"}
             </LinkFP>

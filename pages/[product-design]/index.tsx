@@ -8,11 +8,13 @@ const UIDesignPage = () => {
     <Layout>
       <nav className="mt-4 flex">
         <Link href="/">
-          <a className="font-title text-base underline">Home</a>
+          <a className="font-title text-base">Home</a>
         </Link>
         <span className="px-2">·</span>
         <Link href="/ui-design">
-          <a className="font-title text-base">Product Design</a>
+          <a className="font-title text-base text-neutral-500">
+            Product Design
+          </a>
         </Link>
       </nav>
       <div className="mt-16 mb-20">

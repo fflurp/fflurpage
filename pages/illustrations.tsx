@@ -20,17 +20,17 @@ const gallery = [
 const UIDesignPage = () => {
   return (
     <Layout>
-      <nav className="flex mt-10">
+      <nav className="mt-10 flex">
         <Link href="/">
-          <a className="underline text-base font-title">Home</a>
+          <a className="font-title text-base">Home</a>
         </Link>
         <span className="px-2">·</span>
         <Link href="/ui-design">
-          <a className="text-base font-title">Illustration</a>
+          <a className="font-title text-base text-neutral-500">Illustration</a>
         </Link>
       </nav>
       <div className="mt-16 mb-20">
-        <h1 className="text-5xl font-title mb-6">Illustrations</h1>
+        <h1 className="mb-6 font-title text-5xl">Illustrations</h1>
         <p className="text-xl">
           Applied to product design, illustrations play a massive role in
           amplifying or simplifying the messages that are delivered to the
@@ -42,7 +42,7 @@ const UIDesignPage = () => {
       <div className="grid gap-8 md:grid-cols-3">
         {gallery.map((img, index) => {
           return (
-            <div key={index} className="rounded-xl flex overflow-hidden">
+            <div key={index} className="flex overflow-hidden rounded-xl">
               <Image src={`/illustration/${img}`} width="800" height="800" />
             </div>
           );
