@@ -48,20 +48,18 @@ const UIDesignPage = () => {
             </Link>
           </div>
           <div className="w-full">
-            <Link href="/product-design/clear-fashion">
-              <a className="cursor-wait opacity-75">
-                <div className="flex h-full max-h-80 overflow-hidden rounded-tl-3xl rounded-tr-3xl">
-                  <img
-                    src="/product_design/Coming_soon.png"
-                    className="w-full object-cover"
-                    alt="rebell"
-                  />
-                </div>
-                <div className="inline-flex w-full overflow-hidden rounded-bl-3xl rounded-br-3xl bg-[#FAFBFF]/50 py-6 px-4 font-title-bold text-lg">
-                  <span>Rebell</span>
-                </div>
-              </a>
-            </Link>
+            <a className="cursor-wait opacity-75">
+              <div className="flex h-full max-h-80 overflow-hidden rounded-tl-3xl rounded-tr-3xl">
+                <img
+                  src="/product_design/Coming_soon.png"
+                  className="w-full object-cover"
+                  alt="rebell"
+                />
+              </div>
+              <div className="inline-flex w-full overflow-hidden rounded-bl-3xl rounded-br-3xl bg-[#FAFBFF]/50 py-6 px-4 font-title-bold text-lg">
+                <span>Rebell</span>
+              </div>
+            </a>
           </div>
         </div>
       </div>
