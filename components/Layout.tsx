@@ -8,7 +8,7 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <div className="mx-auto max-w-screen-lg px-8">
+    <div className="mx-auto max-w-screen-xl px-8">
       <header className="py-6">
         <nav className="flex w-full items-center justify-between">
           <Link href="/">
@@ -82,6 +82,7 @@ type LinkFPProps = {
   className: string;
 } & React.ComponentPropsWithRef<"a">;
 
+// eslint-disable-next-line react/display-name
 const LinkFP = forwardRef<HTMLAnchorElement, LinkFPProps>(
   ({ children, className, ...props }, ref) => {
     return (
@@ -89,13 +90,13 @@ const LinkFP = forwardRef<HTMLAnchorElement, LinkFPProps>(
         ref={ref}
         className={`${className}
           cursor-pointer
-          bg-gradient-to-r from-pink-200 to-purple-200
-          bg-[length:0px_3px]
+          bg-gradient-to-r from-neutral-800 to-neutral-600
+          bg-[length:0px_1px]
           bg-left-bottom
           bg-no-repeat
           transition-[background-size]
           duration-500
-          hover:bg-[length:100%_3px]`}
+          hover:bg-[length:100%_1px]`}
         {...props}
       >
         {children}

@@ -1,6 +1,6 @@
 const Button: React.FC<{ children: string }> = ({ children }) => {
   return (
-    <button className="transition-all font-title bg-neutral-700 hover:bg-neutral-700/75 text-white font-bold py-2 px-10 rounded leading-6">
+    <button className="rounded bg-neutral-700 py-2 px-10 font-title font-bold leading-6 text-white transition-all hover:bg-neutral-600">
       {children}
     </button>
   );
@@ -8,9 +8,9 @@ const Button: React.FC<{ children: string }> = ({ children }) => {
 
 const CTAMail = () => {
   return (
-    <section className="text-center py-80">
+    <section className="py-80 text-center">
       <div>
-        <h2 className="text-3xl font-title-bold mb-6">
+        <h2 className="mb-6 font-title-bold text-3xl">
           Need an impactful design?
         </h2>
         <p className="mb-10">{`I'd be happy to help.`}</p>

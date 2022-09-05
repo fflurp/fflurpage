@@ -6,21 +6,21 @@ import Image from "next/image";
 const ClearFashionPage = () => {
   return (
     <Layout>
-      <nav className="flex mt-4">
+      <nav className="mt-4 flex">
         <Link href="/">
-          <a className="underline text-base font-title">Home</a>
+          <a className="font-title text-base underline">Home</a>
         </Link>
         <span className="px-2">·</span>
         <Link href="/ui-design">
-          <a className="underline text-base font-title">Product Design</a>
+          <a className="font-title text-base underline">Product Design</a>
         </Link>
         <span className="px-2">·</span>
         <Link href="/ui-design">
-          <a className="text-base font-title">Clear Fashion</a>
+          <a className="font-title text-base">Clear Fashion</a>
         </Link>
       </nav>
       <div className="mt-16 mb-20">
-        <h1 className="text-5xl font-title mb-6">Clear Fashion</h1>
+        <h1 className="mb-6 font-title text-5xl">Clear Fashion</h1>
         <p className="text-xl">
           Clear Fashion is a french, mission-led company that helps consumers
           check fashion brands engagements and analyse garments social and
@@ -68,23 +68,20 @@ const ClearFashionPage = () => {
         text={
           <>
             <p className="mb-2">
-              I’m Fflur Page, a freelance UI designer & illustrator based in
-              Paris.
+              In order to improve the fashion industry, Clear Fashion’s goal is
+              to spread information about brands practices as widely as
+              possible. We realised that the mobile app, while being great for a
+              personalized experience, could actually be an obstacle to that
+              goal. Building a web app would enable consumers (even ones that
+              haven’t downloaded the app yet) to scan products from QR codes and
+              be redirected to the evaluation page through their mobile’s
+              navigator.
             </p>
             <p className="mb-2">
-              After graduating from HETIC tech school, I worked 2 years as a
-              product designer for a french startup. I was involved throughout
-              the full design process from discovering users needs to delivering
-              the best solution to address them. It was during that time I
-              noticed that product teams don’t always have the time or
-              ressources to create and manage assets efficiently.{" "}
-            </p>
-            <p className="mb-2">
-              To me, UI plays a huge role in enhancing the users experience
-              while allowing brands to make a statement. The right components,
-              icon set and illustration system will make a product so much more
-              than attractive, it will make it consistent and reliable. I want
-              to focus on helping companies and product teams achieve that!
+              My role here was to design the web app’s MVP mockups, define it’s
+              purpose in the user journey, prioritize the features
+              implementations and insure the consistency of the design system
+              throughout Clear Fashion’s products.
             </p>
           </>
         }
@@ -95,23 +92,21 @@ const ClearFashionPage = () => {
         text={
           <>
             <p className="mb-2">
-              I’m Fflur Page, a freelance UI designer & illustrator based in
-              Paris.
+              Clear Fashion’s business model is based on the brands subscription
+              to a licence that allows them to display their brand and products
+              evaluation.
             </p>
             <p className="mb-2">
-              After graduating from HETIC tech school, I worked 2 years as a
-              product designer for a french startup. I was involved throughout
-              the full design process from discovering users needs to delivering
-              the best solution to address them. It was during that time I
-              noticed that product teams don’t always have the time or
-              ressources to create and manage assets efficiently.{" "}
+              I worked with the marketing team and fashion brands to define
+              offers that would be the most useful to brands while fulfilling
+              our goal of bringing awareness to the consumers.
             </p>
             <p className="mb-2">
-              To me, UI plays a huge role in enhancing the users experience
-              while allowing brands to make a statement. The right components,
-              icon set and illustration system will make a product so much more
-              than attractive, it will make it consistent and reliable. I want
-              to focus on helping companies and product teams achieve that!
+              That’s when we decided to design widgets that met the brands
+              visual requirements. They are meant to be displayed on their
+              website’s product pages, and sum up the most valuable informations
+              about the products fabrication, according to user-research and
+              fashion industry experts.
             </p>
           </>
         }
@@ -136,7 +131,7 @@ const SectionImgText: React.FC<SectionImgTextProps> = ({
 }) => {
   return (
     <section
-      className={`mt-80 flex flex-col gap-8 ${
+      className={`mt-80 flex flex-col items-center gap-8 ${
         isReverse ? `md:flex-row-reverse` : `md:flex-row`
       }`}
     >
@@ -146,7 +141,7 @@ const SectionImgText: React.FC<SectionImgTextProps> = ({
         </div>
       </div>
       <div className="flex-[0.6]">
-        <h2 className="text-3xl font-title mb-8">{title}</h2>
+        <h2 className="mb-8 font-title text-3xl">{title}</h2>
         <div className="text-lg">{text}</div>
       </div>
     </section>
