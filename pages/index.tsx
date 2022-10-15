@@ -58,6 +58,13 @@ const Home: NextPage = () => {
             ]}
           />
         </div>
+        <div className="pt-12 text-center">
+          <Link href="/projects">
+            <span className="cursor-pointer font-title underline">
+              More projects
+            </span>
+          </Link>
+        </div>
       </section>
       <section className="flex flex-col items-center gap-8 pt-80 md:flex-row">
         <div className="flex-[0.4]">
@@ -87,6 +94,35 @@ const Home: NextPage = () => {
             illustration system will make a product so much more than
             attractive, it will make it consistent, reliable and unique.
           </p>
+        </div>
+      </section>
+      <section>
+        <div className="flex flex-col items-start items-center gap-8 pt-80 md:flex-row">
+          <div className="flex-1 rounded-2xl bg-[#FAFBFF] px-6 pt-6 pb-16">
+            <span className="text-[32px]">💬</span>
+            <p className="border-l-2 border-gray-700 pl-2 text-lg">
+              “Working with Fflur was a true pleasure, her mockups, fun
+              illustrations and skills on Figma helped massively the integration
+              of new features on our Products. Fflur is also a nice person to
+              work with, open minded and reactive. I can only recommend her !”
+            </p>
+            <span className="inline-flex pt-4 font-title text-sm text-gray-600">
+              THIBAUT, FRONT-END DEVELOPER @CLEAR FASHION
+            </span>
+          </div>
+          <div className="flex-1 rounded-2xl bg-[#FAFBFF] px-6 pt-6 pb-16">
+            <span className="inline-flex pb-4 text-[32px]">💬</span>
+            <p className="border-l-2 border-gray-700 pl-2 text-lg">
+              “As a designer, Fflur was able to deliver fonctional and aesthetic
+              interfaces. She is creative in finding solutions during the design
+              process, her flexibility and efficacity make her a quality project
+              partner. Fflur always has a smile on her face and invests herself
+              in her work.”
+            </p>
+            <span className="inline-flex pt-4 font-title text-sm text-gray-600">
+              JULIETTE, PRODUCT MANAGER @CLEAR FASHION
+            </span>
+          </div>
         </div>
       </section>
       <CTAMail />

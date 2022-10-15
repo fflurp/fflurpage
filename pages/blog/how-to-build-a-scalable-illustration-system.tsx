@@ -20,12 +20,12 @@ const BlogImage: React.FC<BlogImageProps> = ({ src, alt, caption }) => {
 const BlogPost = () => {
   return (
     <Layout>
-      <div className="mx-auto max-w-[778px] pt-32 pb-40">
+      <div className="mx-auto max-w-[778px] pt-32 pb-80">
         <h1 className="pb-10 font-title-bold text-5xl">
           Product illustration 101: How to build a scalable product illustration
           system{" "}
         </h1>
-        <article>
+        <article className="pb-40">
           <p className="pb-4">
             Digital product’s hugely benefit from illustrations. Here’s a quick
             reminder why :{" "}

@@ -45,32 +45,35 @@ const Layout: React.FC<LayoutProps> = ({ children, hero }) => {
       </header>
       {hero ? <div className="flex h-[444px]">{hero}</div> : null}
       <main className="mx-auto max-w-screen-xl px-8">{children}</main>
-      <footer className="mx-auto mb-10 flex max-w-screen-xl justify-between  px-8">
-        <div className="font-title">
-          © Fflur Page {new Date().getFullYear()}
-        </div>
-        <div className="flex gap-4">
-          <a
-            href="https://www.linkedin.com/in/fflurpage/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image src="/Linkedin.png" width={24} height={24} />
-          </a>
-          <a
-            href="https://twitter.com/fflurpage"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image src="/Twitter.png" width={24} height={24} />
-          </a>
-          <a
-            href="https://dribbble.com/fflurpage"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image src="/Dribbble.png" width={24} height={24} />
-          </a>
+      <footer className="relative">
+        <img src="/waves.svg" className="absolute bottom-0 left-0 z-0" />
+        <div className="z-10 mx-auto flex max-w-screen-xl justify-between px-8">
+          <div className="z-10 mb-10 font-title text-gray-600">
+            © Fflur Page {new Date().getFullYear()}
+          </div>
+          <div className="mb-10 flex gap-4">
+            <a
+              href="https://www.linkedin.com/in/fflurpage/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image src="/Linkedin.png" width={24} height={24} />
+            </a>
+            <a
+              href="https://twitter.com/fflurpage"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image src="/Twitter.png" width={24} height={24} />
+            </a>
+            <a
+              href="https://dribbble.com/fflurpage"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Image src="/Dribbble.png" width={24} height={24} />
+            </a>
+          </div>
         </div>
       </footer>
     </div>
