@@ -10,16 +10,16 @@ const Home: NextPage = () => {
     <Layout>
       <section className="pt-14">
         <div className="flex flex-col items-center gap-8 text-center md:flex-row">
-          <div className="flex h-full basis-5/12 flex-col text-left">
-            <h1 className="font-display mb-4 font-title-bold text-3xl">
-              Product Designer & illustrator
+          <div className="flex h-full flex-1 flex-col text-left">
+            <h1 className="font-display mb-4 font-title-bold text-5xl leading-[64px] text-gray-700">
+              Creative product designer & illustrator
             </h1>
             <h2 className="text-xl">
-              I design user-centered interfaces and UI assets to help teams
-              deliver unique and consistent products.
+              Everything from UI design to digital content creation for an extra
+              topping of user satisfaction 🧁
             </h2>
           </div>
-          <div className="w-full basis-7/12">
+          <div className="w-full flex-1">
             <Image
               priority
               src="/home/Hero_grouped.webp"
