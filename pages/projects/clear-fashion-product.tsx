@@ -2,25 +2,20 @@ import CTAMail from "components/CTAMail";
 import Layout from "components/Layout";
 import Link from "next/link";
 import Image from "next/image";
+import Chip from "components/Chip";
 
 const ClearFashionPage = () => {
   return (
-    <Layout>
-      <nav className="mt-4 flex">
-        <Link href="/">
-          <a className="font-title text-base ">Home</a>
-        </Link>
-        <span className="px-2">·</span>
-        <Link href="/product-design">
-          <a className="font-title text-base">Product Design</a>
-        </Link>
-        <span className="px-2">·</span>
-        <Link href="/product-design">
-          <a className="font-title text-base text-neutral-500">Clear Fashion</a>
-        </Link>
-      </nav>
+    <Layout
+      hero={
+        <img src={`/cf/CF_banner.png`} className="h-full w-full object-cover" />
+      }
+    >
       <div className="mt-16 mb-20">
-        <h1 className="mb-6 font-title-bold text-5xl">Clear Fashion</h1>
+        <div className="mb-6 inline-flex items-start">
+          <h1 className="mr-8 font-title-bold text-5xl">Clear Fashion</h1>
+          <Chip>UI design</Chip>
+        </div>
         <p className="text-xl">
           Clear Fashion is a french, mission-led company that helps consumers
           check fashion brands engagements and analyse garments social and
@@ -30,11 +25,6 @@ const ClearFashionPage = () => {
           on a network of products including a web app and widgets displayed on
           brands websites.
         </p>
-      </div>
-      <div>
-        <div className="w-full">
-          <Image src={`/cf/CF_banner.png`} width="3229" height="971" />
-        </div>
       </div>
       <SectionImgText
         img="ProductDesign_banner.png"

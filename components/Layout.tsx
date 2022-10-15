@@ -4,12 +4,13 @@ import React, { forwardRef } from "react";
 
 interface LayoutProps {
   children: React.ReactNode;
+  hero?: React.ReactNode;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children, hero }) => {
   return (
-    <div className="mx-auto max-w-screen-xl px-8">
-      <header className="py-6">
+    <div>
+      <header className="mx-auto max-w-screen-xl py-6 px-8">
         <nav className="flex w-full items-center justify-between">
           <Link href="/">
             <a>
@@ -29,29 +30,22 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </a>
           </Link>
           <div>
-            <Link href="/product-design">
+            <Link href="/projects">
               <LinkFP className="mr-4 font-title text-[12px] sm:mr-10 sm:text-sm">
-                Product Design
+                Projects
               </LinkFP>
             </Link>
-            <Link href="/illustrations">
+            <Link href="/blog">
               <LinkFP className="mr-4 font-title text-[12px] sm:mr-10 sm:text-sm">
-                Illustration
+                Blog posts{"  ✍️"}
               </LinkFP>
             </Link>
-            <LinkFP
-              href="https://medium.com/@fflurpage"
-              target="_blank"
-              rel="noreferrer"
-              className="font-title text-[12px] sm:text-sm"
-            >
-              Blog posts{"  ✍️"}
-            </LinkFP>
           </div>
         </nav>
       </header>
-      {children}
-      <footer className="mb-10 flex justify-between">
+      {hero ? <div className="flex h-[444px]">{hero}</div> : null}
+      <main className="mx-auto max-w-screen-xl px-8">{children}</main>
+      <footer className="mx-auto mb-10 flex max-w-screen-xl justify-between  px-8">
         <div className="font-title">
           © Fflur Page {new Date().getFullYear()}
         </div>

@@ -11,9 +11,9 @@ const CTAMail = () => {
     <section className="py-80 text-center">
       <div>
         <h2 className="mb-6 font-title-bold text-3xl">
-          Need an impactful design?
+          Want your digital product to stand out?
         </h2>
-        <p className="mb-10">{`I'd be happy to help.`}</p>
+        <p className="mb-10">{`Make it extra satisfying for your users 🧁`}</p>
         <a href="mailto:fflur.page@gmail.com">
           <Button>{`Let's talk`}</Button>
         </a>

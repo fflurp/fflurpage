@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Layout from "components/Layout";
 import CTAMail from "components/CTAMail";
+import Card from "components/Card";
 
 const Home: NextPage = () => {
   return (
@@ -29,38 +30,27 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className="mt-40 flex flex-col gap-8 md:flex-row">
-          <div className="w-full flex-1">
-            <Link href="/product-design">
-              <a>
-                <div className="flex max-h-80 overflow-hidden rounded-tl-3xl rounded-tr-3xl">
-                  <img
-                    src="/cf/ProductDesign_banner.png"
-                    className="object-cover"
-                    alt="product design banner"
-                  />
-                </div>
-                <div className="inline-flex w-full overflow-hidden rounded-bl-3xl rounded-br-3xl bg-[#FAFBFF]/50 py-6 px-4 font-title-bold text-lg">
-                  <span>Product Design</span>
-                </div>
-              </a>
-            </Link>
-          </div>
-          <div className="w-full flex-1">
-            <Link href="/illustrations">
-              <a>
-                <div className="flex max-h-80 overflow-hidden rounded-tl-3xl rounded-tr-3xl">
-                  <img
-                    src="/home/Illustration_banner.png"
-                    className="object-cover"
-                    alt="illustration banner"
-                  />
-                </div>
-                <span className="inline-flex w-full overflow-hidden rounded-bl-3xl rounded-br-3xl bg-[#FFFBF5]/50 py-6 px-4 font-title-bold text-lg">
-                  Illustration
-                </span>
-              </a>
-            </Link>
-          </div>
+          <Card
+            title={"Clear Fashion"}
+            description={"Clear Fashion"}
+            link={"/projects"}
+            image={"/cf/ProductDesign_banner.png"}
+            tags={["UI Design", "Illustration"]}
+          />
+          <Card
+            title={""}
+            description={""}
+            link={""}
+            image={"/cf/ProductDesign_banner.png"}
+            tags={[]}
+          />
+          <Card
+            title={""}
+            description={""}
+            link={""}
+            image={"/cf/ProductDesign_banner.png"}
+            tags={[]}
+          />
         </div>
       </section>
       <section className="flex flex-col items-center gap-8 pt-80 md:flex-row">
