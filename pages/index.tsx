@@ -31,25 +31,31 @@ const Home: NextPage = () => {
         </div>
         <div className="mt-40 flex flex-col gap-8 md:flex-row">
           <Card
-            title={"Clear Fashion"}
-            description={"Clear Fashion"}
-            link={"/projects"}
-            image={"/cf/ProductDesign_banner.png"}
-            tags={["UI Design", "Illustration"]}
+            title="CLEAR FASHION"
+            description={"Mobile, web app and widget design "}
+            link={"/projects/clear-fashion-product"}
+            image={"/Project/CF-UI/Banniere/CF_UI_BANNER-2.png"}
+            tags={[{ text: "UI Design", variant: "primary" }]}
           />
           <Card
-            title={""}
-            description={""}
-            link={""}
-            image={"/cf/ProductDesign_banner.png"}
-            tags={[]}
+            title="CLEAR FASHION"
+            description={"Illustation set for Clear Fashion’s mobile app "}
+            link={"/projects/clear-fashion-illustration"}
+            image={"/Project/CF-illu/Banniere/CF_illu_BANNER-2.png"}
+            tags={[
+              { text: "Content creation", variant: "secondary" },
+              { text: "UI Design", variant: "primary" },
+            ]}
           />
           <Card
-            title={""}
-            description={""}
-            link={""}
-            image={"/cf/ProductDesign_banner.png"}
-            tags={[]}
+            title="DELPHEE"
+            description={"Social media branding and illustrations"}
+            link={"/projects/delphee"}
+            image={"/Project/Delphee/Banniere/Delphee_BANNER-2.png"}
+            tags={[
+              { text: "Content creation", variant: "secondary" },
+              { text: "Online branding", variant: "tertiary" },
+            ]}
           />
         </div>
       </section>

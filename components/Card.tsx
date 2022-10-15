@@ -27,8 +27,8 @@ const Card: React.FC<CardProps> = ({
     <div className="w-full flex-1 rounded-3xl shadow-[0_4px_32px_rgba(167,188,255,0.16)]">
       <Link href={link}>
         <a>
-          <div className="flex max-h-60 overflow-hidden rounded-tl-3xl rounded-tr-3xl">
-            <img src={image} className="object-cover" alt={title} />
+          <div className="flex h-60 overflow-hidden rounded-tl-3xl rounded-tr-3xl">
+            <img src={image} className="w-full object-cover" alt={title} />
           </div>
           <div className="flex h-[272px] w-full flex-col justify-between overflow-hidden rounded-bl-3xl rounded-br-3xl bg-[#FAFBFF]/50 py-6 px-4">
             <div className="flex flex-col">

@@ -18,12 +18,9 @@ const Blog = () => {
             description={
               "Product illustration 101: How to build a scalable product illustration system"
             }
-            link={"/projects/clear-fashion-product"}
-            image={"/cf/ProductDesign_banner.png"}
-            tags={[
-              { text: "UI Design", variant: "primary" },
-              { text: "Illustration", variant: "secondary" },
-            ]}
+            link={"/blog/how-to-build-a-scalable-illustration-system"}
+            image={"/Blog/Illustration-system/Banniere.png"}
+            tags={[{ text: "UI Design", variant: "primary" }]}
           />
         </div>
       </div>

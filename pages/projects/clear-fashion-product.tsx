@@ -8,13 +8,18 @@ const ClearFashionPage = () => {
   return (
     <Layout
       hero={
-        <img src={`/cf/CF_banner.png`} className="h-full w-full object-cover" />
+        <img
+          src="/Project/CF-UI/Banniere/CF_UI_BANNER-2.png"
+          className="h-full w-full object-cover"
+        />
       }
     >
       <div className="mt-16 mb-20">
         <div className="mb-6 inline-flex items-start">
           <h1 className="mr-8 font-title-bold text-5xl">Clear Fashion</h1>
-          <Chip>UI design</Chip>
+          <div className="flex flex-wrap gap-2">
+            <Chip variant="primary">UI design</Chip>
+          </div>
         </div>
         <p className="text-xl">
           Clear Fashion is a french, mission-led company that helps consumers
