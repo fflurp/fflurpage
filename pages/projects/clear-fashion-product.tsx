@@ -15,9 +15,11 @@ const ClearFashionPage = () => {
       }
     >
       <div className="mt-16 mb-20">
-        <div className="mb-6 inline-flex items-start">
-          <h1 className="mr-8 font-title-bold text-5xl">Clear Fashion</h1>
-          <div className="flex flex-wrap gap-2">
+        <div className="mb-6 inline-flex flex-wrap items-start">
+          <h1 className="mr-8 font-title-bold text-5xl leading-[56px]">
+            Clear Fashion
+          </h1>
+          <div className="mt-2 flex flex-wrap gap-2">
             <Chip variant="primary">UI design</Chip>
           </div>
         </div>
@@ -126,7 +128,7 @@ const SectionImgText: React.FC<SectionImgTextProps> = ({
 }) => {
   return (
     <section
-      className={`mt-80 flex flex-col items-center gap-8 ${
+      className={`mt-40 flex flex-col items-center gap-8 md:mt-80 ${
         isReverse ? `md:flex-row-reverse` : `md:flex-row`
       }`}
     >

@@ -6,7 +6,7 @@ const Blog = () => {
   return (
     <Layout>
       <div className="mt-16 mb-20">
-        <h1 className="mb-6 font-title-bold text-5xl">Blog</h1>
+        <h1 className="mb-6 font-title-bold text-5xl leading-[56px]">Blog</h1>
         <p className="text-xl">
           Sharing my thoughts about UI best practices, digital content creation
           and online branding

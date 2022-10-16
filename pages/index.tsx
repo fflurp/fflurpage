@@ -11,7 +11,7 @@ const Home: NextPage = () => {
       <section className="pt-14">
         <div className="flex flex-col items-center gap-8 text-center md:flex-row">
           <div className="flex h-full flex-1 flex-col text-left">
-            <h1 className="font-display mb-4 font-title-bold text-5xl leading-[64px] text-gray-700">
+            <h1 className="font-display mb-4 font-title-bold text-5xl leading-[56px] text-gray-700">
               Creative product designer & illustrator
             </h1>
             <h2 className="text-xl">
@@ -29,7 +29,7 @@ const Home: NextPage = () => {
             />
           </div>
         </div>
-        <div className="mt-40 flex flex-col gap-8 md:flex-row">
+        <div className="flex flex-col gap-8 pt-40 md:flex-row md:pt-80">
           <Card
             title="CLEAR FASHION"
             description={"Mobile, web app and widget design "}
@@ -41,7 +41,7 @@ const Home: NextPage = () => {
             title="CLEAR FASHION"
             description={"Illustation set for Clear Fashion’s mobile app "}
             link={"/projects/clear-fashion-illustration"}
-            image={"/Project/CF-illu/Banniere/CF_illu_BANNER-2.png"}
+            image={"/Project/CF-illu/Banniere/CF_illu_banner-2.png"}
             tags={[
               { text: "Content creation", variant: "secondary" },
               { text: "UI Design", variant: "primary" },
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
             title="DELPHEE"
             description={"Social media branding and illustrations"}
             link={"/projects/delphee"}
-            image={"/Project/Delphee/Banniere/Delphee_BANNER-2.png"}
+            image={"/Project/Delphee/Banniere/Delphee_banner-2.png"}
             tags={[
               { text: "Content creation", variant: "secondary" },
               { text: "Online branding", variant: "tertiary" },
@@ -66,7 +66,7 @@ const Home: NextPage = () => {
           </Link>
         </div>
       </section>
-      <section className="flex flex-col items-center gap-8 pt-80 md:flex-row">
+      <section className="flex flex-col items-center gap-8 pt-40 md:flex-row  md:pt-80">
         <div className="flex-[0.4]">
           <Image src="/home/Profil_pic.png" width="1604" height="1492" />
         </div>
@@ -97,7 +97,7 @@ const Home: NextPage = () => {
         </div>
       </section>
       <section>
-        <div className="flex flex-col items-start items-center gap-8 pt-80 md:flex-row">
+        <div className="flex flex-col items-start gap-8 pt-40 md:flex-row md:pt-80">
           <div className="flex-1 rounded-2xl bg-[#FAFBFF] px-6 pt-6 pb-16">
             <span className="text-[32px]">💬</span>
             <p className="border-l-2 border-gray-700 pl-2 text-lg">

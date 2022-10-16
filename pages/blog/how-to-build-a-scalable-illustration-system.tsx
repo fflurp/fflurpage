@@ -20,8 +20,8 @@ const BlogImage: React.FC<BlogImageProps> = ({ src, alt, caption }) => {
 const BlogPost = () => {
   return (
     <Layout>
-      <div className="mx-auto max-w-[778px] pt-32 pb-80">
-        <h1 className="pb-10 font-title-bold text-5xl">
+      <div className="mdpt-32 mx-auto max-w-[778px] pt-16 pb-40 md:pb-80">
+        <h1 className="pb-10 font-title-bold text-5xl leading-[56px]">
           Product illustration 101: How to build a scalable product illustration
           system{" "}
         </h1>
@@ -30,7 +30,7 @@ const BlogPost = () => {
             Digital product’s hugely benefit from illustrations. Here’s a quick
             reminder why :{" "}
           </p>
-          <ul className="list-inside list-disc">
+          <ul className="list-inside list-disc pb-4">
             <li>
               Illustrations show something that copy can’t, it’s a great way of
               bringing clarity to the user and making difficult concepts easier
@@ -40,13 +40,13 @@ const BlogPost = () => {
               A lot of frustration can be avoided by guiding users in a more
               visual way through their journey, like bringing closure to a task
               with a dedicated and noticeable illustration for instance.
+              Bringing smoothness and fluidity to the user-flow will help
+              promote user retention.
             </li>
             <li>
-              Bringing smoothness and fluidity to the user-flow will help
-              promote user retention. Like many UI design decisions,
-              illustration is an extra opportunity for the product’s branding to
-              stand out and make the overall experience unique and
-              distinguishable.
+              Like many UI design decisions, illustration is an extra
+              opportunity for the product’s branding to stand out and make the
+              overall experience unique and distinguishable.
             </li>
           </ul>
           <p className="pb-4">
@@ -74,7 +74,7 @@ const BlogPost = () => {
             guidelines as seriously while building an illustration system.
             Here’s some of the characteristics that should be defined clearly:
           </p>
-          <ul className="list-inside list-disc">
+          <ul className="list-inside list-disc pb-4">
             <li>
               Style: What illustration style fits with the product’s existing
               branding and tone.

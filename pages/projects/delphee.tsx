@@ -30,8 +30,10 @@ const ClearFashionPage = () => {
     >
       <div className="mt-16 pb-20">
         <div className="mb-6 inline-flex items-start">
-          <h1 className="mr-8 font-title-bold text-5xl">Delphee</h1>
-          <div className="flex flex-wrap gap-2">
+          <h1 className="mr-8 inline-flex font-title-bold text-5xl leading-[56px]">
+            Delphee
+          </h1>
+          <div className="mt-2 flex flex-wrap gap-2">
             <Chip variant="secondary">Content creation</Chip>
             <Chip variant="tertiary">Online branding</Chip>
           </div>

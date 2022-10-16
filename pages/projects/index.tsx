@@ -6,7 +6,9 @@ const Work = () => {
   return (
     <Layout>
       <div className="mt-16 mb-20">
-        <h1 className="mb-6 font-title-bold text-5xl">Projects</h1>
+        <h1 className="mb-6 font-title-bold text-5xl leading-[56px]">
+          Projects
+        </h1>
         <p className="text-xl">
           I work on user interface design, visual content creation and online
           branding.

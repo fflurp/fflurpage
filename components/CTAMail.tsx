@@ -8,7 +8,7 @@ const Button: React.FC<{ children: string }> = ({ children }) => {
 
 const CTAMail = () => {
   return (
-    <section className="py-80 text-center">
+    <section className="pt-40 pb-80 text-center md:py-80">
       <div>
         <h2 className="mb-6 font-title-bold text-3xl">
           Want your digital product to stand out?
