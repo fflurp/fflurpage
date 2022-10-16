@@ -1,6 +1,5 @@
 import CTAMail from "components/CTAMail";
 import Layout from "components/Layout";
-import Link from "next/link";
 import Image from "next/image";
 import Chip from "components/Chip";
 

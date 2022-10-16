@@ -23,14 +23,14 @@ const Work = () => {
             title="CLEAR FASHION"
             description={"Mobile, web app and widget design "}
             link={"/projects/clear-fashion-product"}
-            image={"/Project/CF-UI/Banniere/CF_UI_BANNER-2.png"}
+            image={"/Project/CF-UI/Banniere/CF_UI_banner-2.png"}
             tags={[{ text: "UI Design", variant: "primary" }]}
           />
           <Card
             title="CLEAR FASHION"
             description={"Illustation set for Clear Fashion’s mobile app "}
             link={"/projects/clear-fashion-illustration"}
-            image={"/Project/CF-illu/Banniere/CF_illu_BANNER-2.png"}
+            image={"/Project/CF-illu/Banniere/CF_illu_banner-2.png"}
             tags={[
               { text: "Content creation", variant: "secondary" },
               { text: "UI Design", variant: "primary" },
@@ -40,7 +40,7 @@ const Work = () => {
             title="DELPHEE"
             description={"Social media branding and illustrations"}
             link={"/projects/delphee"}
-            image={"/Project/Delphee/Banniere/Delphee_BANNER-2.png"}
+            image={"/Project/Delphee/Banniere/Delphee_banner-2.png"}
             tags={[
               { text: "Content creation", variant: "secondary" },
               { text: "Online branding", variant: "tertiary" },
@@ -52,7 +52,7 @@ const Work = () => {
               "Fun 90’s themed illustration set for personal branding"
             }
             link={"/projects/fflur-page"}
-            image={"/Project/Fflur/Banniere/Fflur_BANNER-2.png"}
+            image={"/Project/Fflur/Banniere/Fflur_banner-2.png"}
             tags={[
               { text: "Content creation", variant: "secondary" },
               { text: "Online branding", variant: "tertiary" },

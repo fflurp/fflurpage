@@ -17,7 +17,7 @@ const ClearFashionPage = () => {
     <Layout
       hero={
         <img
-          src="/Project/CF-illu/Banniere/CF_illu_BANNER-2.png"
+          src="/Project/CF-illu/Banniere/CF_illu_banner-2.png"
           className="h-full w-full object-cover"
         />
       }
