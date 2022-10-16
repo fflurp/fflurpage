@@ -29,7 +29,7 @@ const ClearFashionPage = () => {
       }
     >
       <div className="mt-16 pb-20">
-        <div className="mb-6 inline-flex items-start">
+        <div className="mb-6 inline-flex flex-wrap items-start">
           <h1 className="mr-8 inline-flex font-title-bold text-5xl leading-[56px]">
             Delphee
           </h1>

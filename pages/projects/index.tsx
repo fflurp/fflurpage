@@ -23,7 +23,7 @@ const Work = () => {
             title="CLEAR FASHION"
             description={"Mobile, web app and widget design "}
             link={"/projects/clear-fashion-product"}
-            image={"/Project/CF-UI/Banniere/CF_UI_banner-2.png"}
+            image={"/Project/CF-UI/Banniere/CF_UI_BANNER-2.png"}
             tags={[{ text: "UI Design", variant: "primary" }]}
           />
           <Card
