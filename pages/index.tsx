@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <section className="pt-14">
-        <div className="flex flex-col items-center gap-8 text-center md:flex-row">
+        <div className="flex flex-col-reverse items-center gap-8 text-center md:flex-row">
           <div className="flex h-full flex-1 flex-col text-left">
             <h1 className="font-display mb-4 font-title-bold text-5xl leading-[56px] text-gray-700">
               Creative product designer & illustrator
@@ -75,24 +75,23 @@ const Home: NextPage = () => {
             Hi — Nice to meet you!
           </h2>
           <p className="mb-4 text-lg">
-            I’m Fflur Page, a freelance Product Designer & illustrator based in
-            Paris.
+            I’m Fflur Page, a freelance designer and illustrator based in Paris.
           </p>
           <p className="mb-4 text-lg">
             After graduating from HETIC tech school, I worked 2 years as a
             Product Designer for a french startup. I was involved throughout the
             full design process from discovering users needs to delivering the
-            best solution to address them. It was during that time I noticed
-            that product teams don’t always have the time or ressources to
-            create and manage assets efficiently. Shortly after this, I decided
-            to work as an independant, focusing on helping product teams put
-            together cohesive design systems.
+            best solution to address them. During that time, I got involved in
+            product creative tasks, delivering illustrations and UI assets that
+            would make the product stand out and meet the users’ expectations.
           </p>
           <p className="mb-4 text-lg">
-            To me, UI plays a huge role in enhancing the users experience while
-            making a statement as a brand. The right components, icon set and
-            illustration system will make a product so much more than
-            attractive, it will make it consistent, reliable and unique.
+            After that, I wanted to dedicated my work not only on interface
+            design, but on product identity in it’s globality whether it might
+            be UI design and assets, digital content creation or online
+            branding. To me, all those things play a huge role in enhancing the
+            users’ experience while making a statement as a brand, and that’s
+            precisely what I want to help product and marketing teams achieve.
           </p>
         </div>
       </section>
