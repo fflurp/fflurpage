@@ -33,13 +33,7 @@ const ClearFashionPage = () => {
           </div>
         </div>
         <p className="text-xl">
-          Clear Fashion is a french, mission-led company that helps consumers
-          check fashion brands engagements and analyse garments social and
-          environmental impact. I joined the team at an early stage as a Product
-          Designer and worked there for 2 years. At first, I only focused on the
-          initial product, a B2C mobile app with +100k downloads. I then worked
-          on a network of products including a web app and widgets displayed on
-          brands websites.
+        After Clear Fashion received recommendations by an external branding agency, there was a lot to do in order to meet the new guidelines. In addition to the UI components update, I suggested a new illustration set according to the new funky color palette. I went through all the user flows to make sure I knew what illustrations I had to replace, gathered the RGB codes and started designing on Illustrator.
         </p>
       </div>
       <div className="grid gap-8 pt-20 md:grid-cols-3">

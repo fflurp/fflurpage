@@ -86,8 +86,8 @@ const Home: NextPage = () => {
             would make the product stand out and meet the users’ expectations.
           </p>
           <p className="mb-4 text-lg">
-            After that, I wanted to dedicated my work not only on interface
-            design, but on product identity in it’s globality whether it might
+            After that, I wanted to dedicated my work not only to interface
+            design, but to product identity in it’s globality whether it might
             be UI design and assets, digital content creation or online
             branding. To me, all those things play a huge role in enhancing the
             users’ experience while making a statement as a brand, and that’s
@@ -98,10 +98,10 @@ const Home: NextPage = () => {
       <section>
         <div className="flex flex-col items-start gap-8 pt-40 md:flex-row md:pt-80">
           <div className="flex-1 rounded-2xl bg-[#FAFBFF] px-6 pt-6 pb-16">
-            <span className="text-[32px]">💬</span>
+          <span className="inline-flex pb-4 text-[32px]">💬</span>
             <p className="border-l-2 border-gray-700 pl-2 text-lg">
               “Working with Fflur was a true pleasure, her mockups, fun
-              illustrations and skills on Figma helped massively the integration
+              illustrations and skills on Figma were massive help to the integration
               of new features on our Products. Fflur is also a nice person to
               work with, open minded and reactive. I can only recommend her !”
             </p>
@@ -112,10 +112,10 @@ const Home: NextPage = () => {
           <div className="flex-1 rounded-2xl bg-[#FAFBFF] px-6 pt-6 pb-16">
             <span className="inline-flex pb-4 text-[32px]">💬</span>
             <p className="border-l-2 border-gray-700 pl-2 text-lg">
-              “As a designer, Fflur was able to deliver fonctional and aesthetic
-              interfaces. She is creative in finding solutions during the design
-              process, her flexibility and efficacity make her a quality project
-              partner. Fflur always has a smile on her face and invests herself
+              “As a designer, Fflur delivered fonctional and aesthetic
+              interfaces. She was able to find creative solutions during the design
+              process, her flexibility and efficacity made her a quality project
+              partner. Fflur always had a smile on her face and invested herself
               in her work.”
             </p>
             <span className="inline-flex pt-4 font-title text-sm text-gray-600">

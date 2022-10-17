@@ -25,7 +25,7 @@ const BlogPost = () => {
           Product illustration 101: How to build a scalable product illustration
           system{" "}
         </h1>
-        <article className="pb-40">
+        <article className="pb-40 text-lg">
           <p className="pb-4">
             Digital product’s hugely benefit from illustrations. Here’s a quick
             reminder why :{" "}
@@ -56,22 +56,22 @@ const BlogPost = () => {
           </p>
           <p className="pb-4">
             What’s interesting is to understand how we can build an illustration
-            system that covers every opportunity to add excitement and reduce
+            system that covers every opportunity to add satisfaction and reduce
             frustration. What’s even more interesting is enabling it to grow
             with the product, without loosing time or consistency. So let’s go
             through the process and characteristics of building a scalable
             illustration system together!
           </p>
-          <h2 className="mt-40 pb-8 font-title-bold text-[32px]">
+          <h2 className="mt-40 pb-8 font-title-bold text-3xl">
             Defining guidelines for a cohesive illustration system
           </h2>
           <p className="pb-4">
             UI design itself is basically a set of guidelines that make the
-            product align with branding and allow designers and developers to
+            product align with branding and UX recommendations while allowing designers and developers to
             easily create or reuse components on the interfaces. From the user’s
             point of view, that consistency is what will make the entire
             experience make sense, that’s why it is important to define
-            guidelines as seriously while building an illustration system.
+            guidelines just as seriously while building an illustration system.
             Here’s some of the characteristics that should be defined clearly:
           </p>
           <ul className="list-inside list-disc pb-4">
@@ -85,7 +85,7 @@ const BlogPost = () => {
               guidelines.
             </li>
             <li>
-              Shapes: Choosing between angular or rounded shapes, a tip could be
+              Shapes: Choosing between geometric or organic shapes, a tip could be
               to refer to the existing logo or icons.
             </li>
             <li>
@@ -110,7 +110,7 @@ const BlogPost = () => {
             src="/Blog/Illustration-system/Guidelines.png"
             alt="Illustration system guidelines"
           />
-          <h2 className="mt-40 pb-8 font-title-bold text-[32px]">
+          <h2 className="mt-40 pb-8 font-title-bold text-3xl">
             Identifying strategic locations that would benefit from illustration
           </h2>
           <p className="pb-4">
@@ -132,7 +132,7 @@ const BlogPost = () => {
             <li>
               Onboarding screens: Onboarding is also a common location for
               illustration, it’s a crucial activation leverage as it gives
-              insight to the user to what the product as to offer and how he can
+              insight to the users to what the product has to offer and how they can
               use it.
             </li>
             <li>
@@ -142,24 +142,24 @@ const BlogPost = () => {
             </li>
             <li>
               Error state: Errors are always frustrating, the least we can do is
-              show the user that the error occurred rather than letting him
+              show the uses that the error occurred rather than letting them
               wonder what the heck is going on. The best we can do is add a fun
               or empathic illustration!
             </li>
             <li>
-              Empty state: If the user ended up here he was expecting something.
-              He’s not going to find what he’s looking for but he can find that
+              Empty state: If the users ended up here they were expecting something.
+              They're not going to find what they're looking for, but thet can find that
               out with an illustration.
             </li>
             <li>
-              Loading state: If nothing is happening, the user will probably
-              lose patience and leave, it’s important to notify that what he’s
+              Loading state: If nothing is happening, the users will probably
+              lose patience and leave, it’s important to notify that what they're
               waiting for is coming. Besides, waiting is dull and time goes
               quicker when there’s something to look at.
             </li>
             <li>
               Success screens: This location is an opportunity to enhance user
-              satisfaction and bring closure to the task he just undertook.
+              satisfaction and bring closure to the task they just undertook.
             </li>
           </ul>
           <p className="pb-4">
@@ -170,15 +170,15 @@ const BlogPost = () => {
             evolve in time.
           </p>
           <BlogImage src="/Blog/Illustration-system/flow.png" alt="User flow" />
-          <h2 className="mt-40 pb-8 font-title-bold text-[32px]">
+          <h2 className="mt-40 pb-8 font-title-bold text-3xl">
             Designing a flexible illustration system
           </h2>
           <p className="pb-4">
-            To really get an illustration system right, we have to understand
+            To get an illustration system right, we have to understand
             that it’s not just meant to be a regular illustration set for the
             product. In fact, it works like a design system: It’s really the
             same process of designing and documenting components that can then
-            be used by the product team to create custom illustrations for the
+            be used by the team to create custom illustrations for the
             product. It’s meant to save time and resources on the illustration
             process while staying cohesive throughout the product.
           </p>
@@ -223,7 +223,7 @@ const BlogPost = () => {
             illustration components over time. It might also be necessary to
             edit the illustration system depending on the evolutions of the
             product’s design system. On a large scale, managing the illustration
-            system can even be a full-time job.
+            system can be a full-time job.
           </p>
           <p className="pb-4">
             That’s it, I hope this post was useful and made the process and

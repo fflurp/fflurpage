@@ -41,13 +41,9 @@ const ClearFashionPage = () => {
         <p className="text-xl">
           Delphee is an oracle card project based on greek mythology gods and
           goddesses. In addition to the card illustrations, I worked on the
-          social media launch of the brand in order to start building a
+          social media branding and launch in order to start building a
           community of people that could be interested in purchasing the card
-          game when it will be ready. I did research on the user communities
-          that should be targeted and defined 4/5 pillars on which I could
-          create content that the targeted audience would be sensible to. I
-          designed all the content and also the online branding for this
-          project.
+          game.
         </p>
       </div>
       <div className="grid gap-8 pt-20 md:grid-cols-3">
