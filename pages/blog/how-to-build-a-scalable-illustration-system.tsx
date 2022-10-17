@@ -147,15 +147,15 @@ const BlogPost = () => {
               or empathic illustration!
             </li>
             <li>
-              Empty state: If the users ended up here they were expecting something.
+              {`Empty state: If the users ended up here they were expecting something.
               They're not going to find what they're looking for, but thet can find that
-              out with an illustration.
+              out with an illustration.`}
             </li>
             <li>
-              Loading state: If nothing is happening, the users will probably
-              lose patience and leave, it’s important to notify that what they're
+              {`Loading state: If nothing is happening, the users will probably
+              lose patience and leave, it's important to notify that what they're
               waiting for is coming. Besides, waiting is dull and time goes
-              quicker when there’s something to look at.
+              quicker when there’s something to look at.`}
             </li>
             <li>
               Success screens: This location is an opportunity to enhance user
