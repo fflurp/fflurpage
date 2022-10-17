@@ -142,7 +142,7 @@ const BlogPost = () => {
             </li>
             <li>
               Error state: Errors are always frustrating, the least we can do is
-              show the uses that the error occurred rather than letting them
+              show the users that the error occurred rather than letting them
               wonder what the heck is going on. The best we can do is add a fun
               or empathic illustration!
             </li>
@@ -218,11 +218,11 @@ const BlogPost = () => {
             Building an illustration system is a great solution to make the
             design process easier and optimize time and resources within the
             product team. It does take a bit of preparation to get it right and
-            although it’s the most scalable way to manage product illustration,
+            although it’s probably the most scalable way to manage product illustration,
             it’s likely that it will need to be implemented with new
             illustration components over time. It might also be necessary to
             edit the illustration system depending on the evolutions of the
-            product’s design system. On a large scale, managing the illustration
+            product’s branding and design system. On a large scale, managing the illustration
             system can be a full-time job.
           </p>
           <p className="pb-4">
