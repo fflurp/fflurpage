@@ -23,7 +23,6 @@ const Card: React.FC<CardProps> = ({
   tags,
 }) => {
   return (
-    // box-shadow: 0px 4px 32px rgba(167, 188, 255, 0.16)
     <div className="w-full flex-1 rounded-3xl shadow-[0_4px_32px_rgba(167,188,255,0.16)]">
       <Link href={link}>
         <a>

@@ -28,7 +28,7 @@ const Work = () => {
           />
           <Card
             title="CLEAR FASHION"
-            description={"Illustation set for Clear Fashion’s mobile app "}
+            description={"Illustration set for Clear Fashion’s mobile app "}
             link={"/projects/clear-fashion-illustration"}
             image={"/Project/CF-illu/Banniere/CF_illu_banner-2.png"}
             tags={[
