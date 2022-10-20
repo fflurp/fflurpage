@@ -10,7 +10,7 @@ const Work = () => {
           Projects
         </h1>
         <p className="text-xl">
-          I work on user interface design, visual content creation and online
+          I work on user interface design, digital asset creation and online
           branding.
         </p>
         <p className="text-xl">
@@ -32,7 +32,7 @@ const Work = () => {
             link={"/projects/clear-fashion-illustration"}
             image={"/Project/CF-illu/Banniere/CF_illu_banner-2.png"}
             tags={[
-              { text: "Content creation", variant: "secondary" },
+              { text: "Asset creation", variant: "secondary" },
               { text: "UI Design", variant: "primary" },
             ]}
           />
@@ -42,7 +42,7 @@ const Work = () => {
             link={"/projects/delphee"}
             image={"/Project/Delphee/Banniere/Delphee_banner-2.png"}
             tags={[
-              { text: "Content creation", variant: "secondary" },
+              { text: "Asset creation", variant: "secondary" },
               { text: "Online branding", variant: "tertiary" },
             ]}
           />
@@ -54,7 +54,7 @@ const Work = () => {
             link={"/projects/fflur-page"}
             image={"/Project/Fflur/Banniere/Fflur_banner-2.png"}
             tags={[
-              { text: "Content creation", variant: "secondary" },
+              { text: "Asset creation", variant: "secondary" },
               { text: "Online branding", variant: "tertiary" },
               { text: "UI Design", variant: "primary" },
             ]}

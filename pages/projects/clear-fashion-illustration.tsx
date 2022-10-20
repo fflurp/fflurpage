@@ -28,7 +28,7 @@ const ClearFashionPage = () => {
             Clear Fashion
           </h1>
           <div className="mt-2 flex flex-wrap gap-2">
-            <Chip variant="secondary">Content creation</Chip>
+            <Chip variant="secondary">Asset creation</Chip>
             <Chip variant="primary">UI design</Chip>
           </div>
         </div>

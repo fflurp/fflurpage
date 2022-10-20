@@ -12,10 +12,10 @@ const Home: NextPage = () => {
         <div className="flex flex-col-reverse items-center gap-8 text-center md:flex-row">
           <div className="flex h-full flex-1 flex-col text-left">
             <h1 className="font-display mb-4 font-title-bold text-5xl leading-[56px] text-gray-700">
-              Creative product designer & illustrator
+              Product designer & illustrator
             </h1>
             <h2 className="text-xl">
-              Everything from UI design to digital content creation for an extra
+              Everything from UI design to digital asset creation for an extra
               topping of user satisfaction 🧁
             </h2>
           </div>
@@ -43,7 +43,7 @@ const Home: NextPage = () => {
             link={"/projects/clear-fashion-illustration"}
             image={"/Project/CF-illu/Banniere/CF_illu_banner-2.png"}
             tags={[
-              { text: "Content creation", variant: "secondary" },
+              { text: "Asset creation", variant: "secondary" },
               { text: "UI Design", variant: "primary" },
             ]}
           />
@@ -53,7 +53,7 @@ const Home: NextPage = () => {
             link={"/projects/delphee"}
             image={"/Project/Delphee/Banniere/Delphee_banner-2.png"}
             tags={[
-              { text: "Content creation", variant: "secondary" },
+              { text: "Asset creation", variant: "secondary" },
               { text: "Online branding", variant: "tertiary" },
             ]}
           />
@@ -87,11 +87,10 @@ const Home: NextPage = () => {
           </p>
           <p className="mb-4 text-lg">
             After that, I wanted to dedicated my work not only to interface
-            design, but to product identity in it’s globality whether it might
-            be UI design and assets, digital content creation or online
-            branding. To me, all those things play a huge role in enhancing the
-            users’ experience while making a statement as a brand, and that’s
-            precisely what I want to help product and marketing teams achieve.
+            design, but also to digital asset creation and online branding. To me, 
+            all those things play a huge role in enhancing the users’ experience 
+            while making a statement as a brand, and that’s precisely what I 
+            want to help product teams achieve.
           </p>
         </div>
       </section>
