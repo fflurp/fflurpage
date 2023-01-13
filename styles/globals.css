@@ -22,3 +22,136 @@
     font-family: SuisseNeue-Light, system-ui, sans-serif;
   }
 }
+
+.h1 {
+  font-family: Gordita Bold;
+  font-size: 48px;
+  line-height: 64px;
+}
+
+.h2 {
+  font-family: Gordita Bold;
+  font-size: 42px;
+  line-height: 40px;
+}
+
+.h3 {
+  font-family: Gordita Bold;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.text1 {
+  font-family: SuisseNeue-Light;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.text2 {
+  font-family: SuisseNeue-Light;
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.text3 {
+  font-family: Gordita Medium;
+  font-size: 18px;
+  line-height: 32px;
+}
+
+.text4 {
+  font-family: Gordita Medium;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.text5 {
+  font-family: Gordita Medium;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.text6 {
+  font-family: Gordita Medium;
+  font-size: 14px;
+  line-height: 4%;
+  text-transform: uppercase;
+}
+
+.text7 {
+  font-family: Gordita Medium;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.text8 {
+  font-family: Gordita Medium;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 8%;
+}
+
+.fp-black {
+  color: #25283d;
+}
+
+.fp-white {
+  color: #fffef9;
+}
+
+.fp-bright-blue {
+  color: #92ddff;
+}
+
+.fp-bright-purple {
+  color: #9ba2ff;
+}
+
+.fp-bright-pink {
+  color: #f5aff5;
+}
+
+.fp-bright-green {
+  color: #6dd3cf;
+}
+
+.fp-bright-yellow {
+  color: #ffd218;
+}
+
+.fp-bright-orange {
+  color: #fdba93;
+}
+
+.fp-bright-grey {
+  color: #9ea0af;
+}
+
+.fp-light-blue {
+  color: #eef9fe;
+}
+
+.fp-light-purple {
+  color: #f1f2ff;
+}
+
+.fp-light-pink {
+  color: #ffecff;
+}
+
+.fp-light-green {
+  color: #e1f7e5;
+}
+
+.fp-light-yellow {
+  color: #eef9fe;
+}
+
+.fp-light-orange {
+  color: #ffece1;
+}
+
+.fp-light-grey {
+  color: #ebecf2;
+}

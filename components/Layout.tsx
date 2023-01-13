@@ -30,13 +30,8 @@ const Layout: React.FC<LayoutProps> = ({ children, hero }) => {
             </a>
           </Link>
           <div>
-            <Link href="/projects">
-              <LinkFP className="text-md mr-4 font-title sm:mr-10 sm:text-sm">
-                Projects
-              </LinkFP>
-            </Link>
             <Link href="/blog">
-              <LinkFP className="text-md mr-4 font-title sm:mr-10 sm:text-sm">
+              <LinkFP className="text-md font-title sm:mr-10 sm:text-sm">
                 Blog posts{"  ✍️"}
               </LinkFP>
             </Link>
