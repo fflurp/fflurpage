@@ -39,11 +39,8 @@ const Layout: React.FC<LayoutProps> = ({ children, hero }) => {
         </nav>
       </header>
       {hero ? <div className="flex h-[222px] md:h-[444px]">{hero}</div> : null}
-      <main className="mx-auto max-w-screen-xl px-8">{children}</main>
+      <main className="mx-auto max-w-screen-xl px-4 md:px-8">{children}</main>
       <footer className="relative">
-        <div className="absolute bottom-0 left-0 z-0">
-          <img src="/waves.svg" className="h-full h-96 w-full object-cover" />
-        </div>
         <div className="z-10 mx-auto flex max-w-screen-xl justify-between px-8">
           <div className="z-10 mb-10 font-title text-gray-600">
             © Fflur Page {new Date().getFullYear()}

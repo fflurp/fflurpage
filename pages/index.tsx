@@ -3,7 +3,36 @@ import Link from "next/link";
 import Image from "next/image";
 import Layout from "components/Layout";
 import CTAMail from "components/CTAMail";
-import Card from "components/Card";
+import Chip from "components/Chip";
+
+const CardProject = () => {
+  return (
+    <div className="group flex w-full flex-col transition">
+      <div className="relative h-[298px] md:h-[500px]">
+        <div className="absolute z-10 hidden h-full w-full bg-white opacity-0 transition group-hover:opacity-50 group-hover:blur-sm md:block" />
+        <img
+          src="/home/Profil_pic.png"
+          alt="project"
+          className="absolute z-0 h-full w-full object-cover transition transition md:group-hover:blur-sm"
+        />
+        <div className="invisible absolute z-20 hidden p-8 transition group-hover:visible md:invisible md:flex md:flex-col">
+          <div className="text5 mb-4">CLEAR FASHION</div>
+          <div className="h3 mb-4">Illustration set for mobile app </div>
+          <div>
+            <Chip>Illustration</Chip>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col items-center md:hidden">
+        <div className="text5 py-4">CLEAR FASHION</div>
+        <div className="h3 pb-4">Illustration set for mobile app </div>
+        <div>
+          <Chip>Illustration</Chip>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Home: NextPage = () => {
   const digitalAssets = [
@@ -42,7 +71,7 @@ const Home: NextPage = () => {
     <Layout>
       <section className="pt-14">
         <div className="flex flex-col items-center gap-8 text-center">
-          <div className="flex h-full w-[520px] flex-1 flex-col text-center">
+          <div className="flex h-full w-full flex-1 flex-col text-center md:w-[520px]">
             <div className="mb-10 w-full flex-1">
               <Image
                 priority
@@ -52,22 +81,24 @@ const Home: NextPage = () => {
                 alt="hero"
               />
             </div>
-            <h1 className="font-display mb-4 font-title-bold text-5xl leading-[56px] text-gray-700">
-              Product designer & illustrator
+            <h1 className="h2 md:h1 mb-4 text-gray-700">
+              Product illustrator & UI Designer
             </h1>
-            <h2 className="text-xl">
-              Everything from UI design to digital asset creation for an extra
+            <h2 className="text-3 md:text2">
+              Everything from UI design to digital content creation for an extra
               topping of user satisfaction 🧁
             </h2>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:pt-80">
+        <div className="grid grid-cols-1 gap-20 pt-80 md:grid-cols-2 md:gap-8">
           {Array(4)
             .fill("")
             .map((_, i) => (
-              <div className="h-[500px] w-full bg-zinc-800" key={i}>
-                test
-              </div>
+              <Link href="/" key={i}>
+                <a>
+                  <CardProject />
+                </a>
+              </Link>
             ))}
         </div>
         <div className="pt-12 text-center">
