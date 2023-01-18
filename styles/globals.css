@@ -13,6 +13,11 @@
 }
 
 @font-face {
+  font-family: "Gordita Regular";
+  src: url("/fonts/Gordita_Regular.otf");
+}
+
+@font-face {
   font-family: "SuisseNeue-Light";
   src: url("/fonts/SuisseNeue-Light.otf");
 }
@@ -40,6 +45,12 @@
     .h3 {
       font-family: Gordita Bold;
       font-size: 24px;
+      line-height: 32px;
+    }
+
+    .h4 {
+      font-family: Gordita Bold;
+      font-size: 18px;
       line-height: 32px;
     }
 
@@ -77,84 +88,100 @@
 
     .text6 {
       font-family: Gordita Medium;
-      font-size: 14px;
-      line-height: 24px;
-    }
-
-    .text7 {
-      font-family: Gordita Medium;
       font-size: 16px;
       line-height: 24px;
     }
 
-    .text8 {
-      font-family: Gordita Medium;
+    .text7 {
+      font-family: Gordita Bold;
       font-size: 14px;
       line-height: 24px;
-      letter-spacing: 8%;
+      letter-spacing: 1.8px;
     }
 
-    .fp-black {
+    .text8 {
+      font-family: Gordita Regular;
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+    .fp-background-cream {
+      background-color: #fffef9;
+    }
+
+    .fp-text-black {
       color: #25283d;
     }
 
-    .fp-white {
+    .fp-background-black {
+      background-color: #25283d;
+    }
+
+    .fp-text-cream {
       color: #fffef9;
     }
 
-    .fp-bright-blue {
+    .fp-text-bright-blue {
       color: #92ddff;
     }
 
-    .fp-bright-purple {
+    .fp-text-bright-purple {
       color: #9ba2ff;
     }
 
-    .fp-bright-pink {
+    .fp-text-bright-pink {
       color: #f5aff5;
     }
 
-    .fp-bright-green {
+    .fp-text-bright-green {
       color: #6dd3cf;
     }
 
-    .fp-bright-yellow {
+    .fp-text-bright-yellow {
       color: #ffd218;
     }
 
-    .fp-bright-orange {
+    .fp-text-bright-orange {
       color: #fdba93;
     }
 
-    .fp-bright-grey {
+    .fp-text-bright-grey {
       color: #9ea0af;
     }
 
-    .fp-light-blue {
+    .fp-text-light-blue {
       color: #eef9fe;
     }
 
-    .fp-light-purple {
+    .fp-background-light-blue {
+      background-color: #eef9fe;
+    }
+
+    .fp-text-light-purple {
       color: #f1f2ff;
     }
 
-    .fp-light-pink {
+    .fp-background-light-purple {
+      background: #f1f2ff;
+    }
+
+    .fp-text-light-pink {
       color: #ffecff;
     }
 
-    .fp-light-green {
+    .fp-text-light-green {
       color: #e1f7e5;
     }
 
-    .fp-light-yellow {
+    .fp-text-light-yellow {
       color: #eef9fe;
     }
 
-    .fp-light-orange {
+    .fp-text-light-orange {
       color: #ffece1;
     }
 
-    .fp-light-grey {
+    .fp-text-light-grey {
       color: #ebecf2;
     }
   }

@@ -9,31 +9,19 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = ({ children, hero }) => {
   return (
-    <div>
+    <div className="fp-background-cream fp-text-black">
       <header className="mx-auto max-w-screen-xl py-6 px-8">
         <nav className="flex w-full items-center justify-between">
           <Link href="/">
             <a>
               <div className="flex items-center">
-                <div className="mr-0 w-8 sm:mr-4">
-                  <Image
-                    src="/home/Icon.png"
-                    width="182"
-                    height="266"
-                    alt="icon"
-                  />
-                </div>
-                <span className="hidden font-title-bold text-sm uppercase sm:block">
-                  Fflur page
-                </span>
+                <span className="text7">fflur page</span>
               </div>
             </a>
           </Link>
           <div>
             <Link href="/blog">
-              <LinkFP className="text-md font-title sm:mr-10 sm:text-sm">
-                Blog posts{"  ✍️"}
-              </LinkFP>
+              <LinkFP className="text4 sm:mr-10">Blog posts{"  ✍️"}</LinkFP>
             </Link>
           </div>
         </nav>
@@ -42,7 +30,7 @@ const Layout: React.FC<LayoutProps> = ({ children, hero }) => {
       <main className="mx-auto max-w-screen-xl px-4 md:px-8">{children}</main>
       <footer className="relative">
         <div className="z-10 mx-auto flex max-w-screen-xl justify-between px-8">
-          <div className="z-10 mb-10 font-title text-gray-600">
+          <div className="z-10 mb-10 font-title">
             © Fflur Page {new Date().getFullYear()}
           </div>
           <div className="mb-10 flex gap-4">

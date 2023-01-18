@@ -20,7 +20,10 @@ const BlogImage: React.FC<BlogImageProps> = ({ src, alt, caption }) => {
 const BlogPost = () => {
   return (
     <Layout>
-      <div className="mdpt-32 mx-auto max-w-[778px] pt-16 pb-40 md:pb-80">
+      <div className="w-full pt-14 text-center">
+        <div className="text4">30/10/2022</div>
+      </div>
+      <div className="mx-auto max-w-[778px] pt-20 pb-40 md:pb-80">
         <h1 className="pb-10 font-title-bold text-5xl leading-[56px]">
           Product illustration 101: How to build a scalable product illustration
           system{" "}

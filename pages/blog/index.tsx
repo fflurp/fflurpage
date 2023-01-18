@@ -7,7 +7,7 @@ type CardProps = {
   image: string;
 };
 
-const Card: React.FC<CardProps> = ({ title, link, image }) => {
+const CardBlogPost: React.FC<CardProps> = ({ title, link, image }) => {
   return (
     <div className="w-full flex-1 rounded-lg border-4 border-gray-900">
       <Link href={link}>
@@ -17,11 +17,7 @@ const Card: React.FC<CardProps> = ({ title, link, image }) => {
           </div>
           <div className="flex h-[168px] w-full flex-col justify-between overflow-hidden rounded-bl-3xl rounded-br-3xl border-t-4 border-gray-900 bg-[#FAFBFF]/50 py-6 px-4">
             <div className="flex flex-col">
-              {title ? (
-                <span className="mb-4 font-title text-sm uppercase">
-                  {title}
-                </span>
-              ) : null}
+              {title ? <span className="h3 mb-4 text-sm">{title}</span> : null}
             </div>
           </div>
         </a>
@@ -38,7 +34,7 @@ const Blog = () => {
       </div>
       <div className="mb-80">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <Card
+          <CardBlogPost
             title={
               "Product illustration 101: How to build a scalable product illustration system"
             }

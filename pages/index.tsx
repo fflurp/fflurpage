@@ -71,8 +71,8 @@ const Home: NextPage = () => {
     <Layout>
       <section className="pt-14">
         <div className="flex flex-col items-center gap-8 text-center">
-          <div className="flex h-full w-full flex-1 flex-col text-center md:w-[520px]">
-            <div className="mb-10 w-full flex-1">
+          <div className="flex h-full w-full flex-1 flex-col items-center text-center">
+            <div className="mb-10 w-full flex-1 md:w-[520px]">
               <Image
                 priority
                 src="/home/Hero_grouped.webp"
@@ -81,17 +81,16 @@ const Home: NextPage = () => {
                 alt="hero"
               />
             </div>
-            <h1 className="h2 md:h1 mb-4 text-gray-700">
+            <h1 className="h2 md:h1 mb-4 w-full md:w-[520px]">
               Product illustrator & UI Designer
             </h1>
             <h2 className="text-3 md:text2">
-              Everything from UI design to digital content creation for an extra
-              topping of user satisfaction 🧁
+              Creating custom, user-centered digital assets and interfaces ✨
             </h2>
           </div>
         </div>
         <div className="grid grid-cols-1 gap-20 pt-80 md:grid-cols-2 md:gap-8">
-          {Array(4)
+          {Array(2)
             .fill("")
             .map((_, i) => (
               <Link href="/" key={i}>
@@ -101,13 +100,11 @@ const Home: NextPage = () => {
               </Link>
             ))}
         </div>
-        <div className="pt-12 text-center">
-          <Link href="/projects">
-            <span className="cursor-pointer font-title underline">
-              More projects
-            </span>
-          </Link>
-        </div>
+        {/* <div className="pt-12 text-center">
+          <span className="cursor-pointer font-title underline">
+            More projects
+          </span>
+        </div> */}
       </section>
       <section className="pt-40 md:pt-80">
         <div className="mb-8 flex flex-col items-center">
@@ -115,7 +112,7 @@ const Home: NextPage = () => {
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           <div className="rounded-lg border-4 border-gray-900">
-            <div className="border-b-4 border-gray-900 p-6 text-center">
+            <div className="fp-background-light-blue h4 border-b-4 border-gray-900 p-6 text-center">
               <h3>Digital assets</h3>
             </div>
             <div className="flex flex-col gap-4 p-8">
@@ -123,9 +120,9 @@ const Home: NextPage = () => {
                 <div className="flex items-center" key={asset.title}>
                   <div className="mr-6 h-20 min-w-[5rem] rounded-lg bg-zinc-800" />
                   <div>
-                    <h4>{asset.title}</h4>
+                    <h4 className="text3">{asset.title}</h4>
                     {asset.description ? (
-                      <span>{asset.description}</span>
+                      <span className="text8">{asset.description}</span>
                     ) : null}
                   </div>
                 </div>
@@ -133,7 +130,7 @@ const Home: NextPage = () => {
             </div>
           </div>
           <div className="rounded-lg border-4 border-gray-900">
-            <div className="border-b-4 border-gray-900 p-6 text-center">
+            <div className="fp-background-light-blue h4 border-b-4 border-gray-900 p-6 text-center">
               <h3>Interfaces</h3>
             </div>
             <div className="flex flex-col gap-4 p-8">
@@ -141,9 +138,9 @@ const Home: NextPage = () => {
                 <div className="flex items-center" key={asset.title}>
                   <div className="mr-6 h-20 min-w-[5rem] rounded-lg bg-zinc-800" />
                   <div>
-                    <h4>{asset.title}</h4>
+                    <h4 className="text3">{asset.title}</h4>
                     {asset.description ? (
-                      <span>{asset.description}</span>
+                      <span className="text8">{asset.description}</span>
                     ) : null}
                   </div>
                 </div>
@@ -160,51 +157,55 @@ const Home: NextPage = () => {
           <h2 className="mb-4 font-title-bold text-2xl">
             Hi — Nice to meet you!
           </h2>
-          <p className="mb-4 text-lg">
-            I’m Fflur Page, a freelance designer and illustrator based in Paris.
-          </p>
-          <p className="mb-4 text-lg">
-            After graduating from HETIC tech school, I worked 2 years as a
-            Product Designer for a french startup. I was involved throughout the
-            full design process from discovering users needs to delivering the
-            best solution to address them. During that time, I got involved in
-            product creative tasks, delivering illustrations and UI assets that
-            would make the product stand out and meet the users’ expectations.
-          </p>
-          <p className="mb-4 text-lg">
-            After that, I wanted to dedicated my work not only to interface
-            design, but also to digital asset creation and online branding. To
-            me, all those things play a huge role in enhancing the users’
-            experience while making a statement as a brand, and that’s precisely
-            what I want to help product teams achieve.
-          </p>
+          <div className="text1">
+            <p className="mb-4">
+              I’m Fflur Page, a freelance designer and illustrator based in
+              Paris.
+            </p>
+            <p className="mb-4">
+              After graduating from HETIC tech school, I worked as a Product
+              Designer for a french startup. I was involved throughout the full
+              design process from discovering users needs to delivering the best
+              solution to address them. During that time, I got involved in
+              creative tasks and started delivering my first illustrations and
+              UI assets for the company’s products.
+            </p>
+            <p className="mb-4">
+              Even though I never thought I was destined to it, I fell in love
+              with illustration right away and decided to start a new journey as
+              a self-taught illustrator and UI asset creator. My product design
+              background acts as a landmark during my creative process, so I can
+              make sure to deliver consistent work and enhance the overall
+              experience.
+            </p>{" "}
+          </div>
         </div>
       </section>
       <section>
         <div className="flex flex-col items-start gap-8 pt-40 md:flex-row md:pt-80">
-          <div className="flex-1 rounded-2xl bg-[#FAFBFF] px-6 pt-6 pb-16">
-            <span className="inline-flex pb-4 text-[32px]">💬</span>
-            <p className="border-l-2 border-gray-700 pl-2 text-lg">
+          <div className="fp-background-light-purple flex-1 rounded-2xl px-6 pt-6 pb-16">
+            <span className="inline-flex pb-4 text-[24px]">⭐️</span>
+            <p className="text3 border-l-4 border-gray-700 pl-4">
               “Working with Fflur was a true pleasure, her mockups, fun
               illustrations and skills on Figma were massive help to the
               integration of new features on our Products. Fflur is also a nice
               person to work with, open minded and reactive. I can only
               recommend her !”
             </p>
-            <span className="inline-flex pt-4 font-title text-sm text-gray-600">
+            <span className="inline-flex pt-4 font-title text-sm">
               THIBAUT, FRONT-END DEVELOPER @CLEAR FASHION
             </span>
           </div>
-          <div className="flex-1 rounded-2xl bg-[#FAFBFF] px-6 pt-6 pb-16">
-            <span className="inline-flex pb-4 text-[32px]">💬</span>
-            <p className="border-l-2 border-gray-700 pl-2 text-lg">
-              “As a designer, Fflur delivered fonctional and aesthetic
-              interfaces. She was able to find creative solutions during the
-              design process, her flexibility and efficacity made her a quality
-              project partner. Fflur always had a smile on her face and invested
-              herself in her work.”
+          <div className="fp-background-light-purple flex-1 rounded-2xl px-6 pt-6 pb-16">
+            <span className="inline-flex pb-4 text-[24px]">⭐️</span>
+            <p className="text3 border-l-4 border-gray-700 pl-4">
+              “As a designer, Fflur was able to deliver fonctional and aesthetic
+              interfaces. She is creative in finding solutions during the design
+              process, her flexibility and efficacity make her a quality project
+              partner. Fflur always has a smile on her face and invests herself
+              in her work.”
             </p>
-            <span className="inline-flex pt-4 font-title text-sm text-gray-600">
+            <span className="inline-flex pt-4 font-title text-sm">
               JULIETTE, PRODUCT MANAGER @CLEAR FASHION
             </span>
           </div>
