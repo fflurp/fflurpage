@@ -40,10 +40,6 @@ const Blog = () => {
             }
             link={"/blog/how-to-build-a-scalable-illustration-system"}
             image={"/Blog/Illustration-system/Banniere.png"}
-            tags={[
-              { text: "UI Design", variant: "primary" },
-              { text: "Asset creation", variant: "secondary" },
-            ]}
           />
         </div>
       </div>
