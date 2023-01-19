@@ -9,13 +9,13 @@ type CardProps = {
 
 const CardBlogPost: React.FC<CardProps> = ({ title, link, image }) => {
   return (
-    <div className="w-full flex-1 rounded-lg border-4 border-gray-900">
+    <div className="w-full flex-1 rounded-lg border-4 border-[#25283d]">
       <Link href={link}>
         <a>
           <div className="flex h-80 overflow-hidden rounded-tl-3xl rounded-tr-3xl">
             <img src={image} className="w-full object-cover" alt={title} />
           </div>
-          <div className="flex h-[168px] w-full flex-col justify-between overflow-hidden rounded-bl-3xl rounded-br-3xl border-t-4 border-gray-900 bg-[#FAFBFF]/50 py-6 px-4">
+          <div className="flex h-[168px] w-full flex-col justify-between overflow-hidden rounded-bl-3xl rounded-br-3xl border-t-4 border-[#25283d] py-6 px-4">
             <div className="flex flex-col">
               {title ? <span className="h3 mb-4 text-sm">{title}</span> : null}
             </div>
@@ -39,7 +39,7 @@ const Blog = () => {
               "Product illustration 101: How to build a scalable product illustration system"
             }
             link={"/blog/how-to-build-a-scalable-illustration-system"}
-            image={"/Blog/Illustration-system/Banniere.png"}
+            image={"/Blog/Illustration-system/blog1-1.png"}
           />
         </div>
       </div>

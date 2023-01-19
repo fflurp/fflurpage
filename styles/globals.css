@@ -82,7 +82,7 @@
       font-family: Gordita Medium;
       font-size: 14px;
       line-height: 24px;
-      letter-spacing: 4%;
+      letter-spacing: 1.8px;
       text-transform: uppercase;
     }
 
@@ -157,32 +157,28 @@
       background-color: #eef9fe;
     }
 
-    .fp-text-light-purple {
-      color: #f1f2ff;
-    }
-
     .fp-background-light-purple {
-      background: #f1f2ff;
+      background-color: #f1f2ff;
     }
 
-    .fp-text-light-pink {
-      color: #ffecff;
+    .fp-background-light-pink {
+      background-color: #ffecff;
     }
 
-    .fp-text-light-green {
-      color: #e1f7e5;
+    .fp-background-light-green {
+      background-color: #e1f7e5;
     }
 
-    .fp-text-light-yellow {
-      color: #eef9fe;
+    .fp-background-light-yellow {
+      background-color: #eef9fe;
     }
 
-    .fp-text-light-orange {
-      color: #ffece1;
+    .fp-background-light-orange {
+      background-color: #ffece1;
     }
 
-    .fp-text-light-grey {
-      color: #ebecf2;
+    .fp-background-light-grey {
+      background-color: #ebecf2;
     }
   }
 }

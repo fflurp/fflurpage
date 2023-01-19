@@ -2,28 +2,13 @@ import React from "react";
 
 type ChipProps = {
   children: string;
-  variant?: "primary" | "secondary" | "tertiary";
+  background: string;
 };
 
-const getBgColor = (variant?: string) => {
-  switch (variant) {
-    case "primary":
-      return "bg-[#A7BCFF]";
-    case "secondary":
-      return "bg-[#FFD3F8]";
-    case "tertiary":
-      return "bg-[#FFF2CF]";
-    default:
-      return "bg-[#A7BCFF]";
-  }
-};
-
-const Chip: React.FC<ChipProps> = ({ children, variant }) => {
+const Chip: React.FC<ChipProps> = ({ children, background }) => {
   return (
     <div
-      className={`getBgColorgetBgColor inline-flex rounded-lg p-2 font-title text-sm ${getBgColor(
-        variant
-      )}`}
+      className={`getBgColorgetBgColor inline-flex rounded-lg p-2 font-title text-sm ${background}`}
     >
       {children}
     </div>

@@ -14,11 +14,12 @@ const CTAMail = () => {
     <section className="pt-40 pb-80 text-center md:py-80">
       <div>
         <h2 className="mb-6 font-title-bold text-3xl">
-          Need some dazzling digital assets or interfaces?
+          Need some dazzling digital assets and interfaces?
         </h2>
-        <a href="mailto:fflur.page@gmail.com">
+        <a target="_blank" href="https://airtable.com/shrpFd7IvTikMqpTK">
           <Button>{`Get in touch 📡`}</Button>
         </a>
+        <p className="text4 mt-20">fflur.page@gmail.com</p>
       </div>
     </section>
   );

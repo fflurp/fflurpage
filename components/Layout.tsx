@@ -31,7 +31,7 @@ const Layout: React.FC<LayoutProps> = ({ children, hero }) => {
       <footer className="relative">
         <div className="z-10 mx-auto flex max-w-screen-xl justify-between px-8">
           <div className="z-10 mb-10 font-title">
-            © Fflur Page {new Date().getFullYear()}
+            © fflur page {new Date().getFullYear()}
           </div>
           <div className="mb-10 flex gap-4">
             <a

@@ -5,29 +5,49 @@ import Layout from "components/Layout";
 import CTAMail from "components/CTAMail";
 import Chip from "components/Chip";
 
-const CardProject = () => {
+type CardProjectProps = {
+  title: string;
+  company: string;
+  tags: { text: string; bg: string }[];
+  image: string;
+};
+
+const CardProject: React.FC<CardProjectProps> = ({
+  title,
+  company,
+  tags,
+  image,
+}) => {
   return (
     <div className="group flex w-full flex-col transition">
       <div className="relative h-[298px] md:h-[500px]">
         <div className="absolute z-10 hidden h-full w-full bg-white opacity-0 transition group-hover:opacity-50 group-hover:blur-sm md:block" />
         <img
-          src="/home/Profil_pic.png"
+          src={image}
           alt="project"
-          className="absolute z-0 h-full w-full object-cover transition transition md:group-hover:blur-sm"
+          className="absolute z-0 h-full w-full object-cover transition md:group-hover:blur-sm"
         />
         <div className="invisible absolute z-20 hidden p-8 transition group-hover:visible md:invisible md:flex md:flex-col">
-          <div className="text5 mb-4">CLEAR FASHION</div>
-          <div className="h3 mb-4">Illustration set for mobile app </div>
-          <div>
-            <Chip>Illustration</Chip>
+          <div className="text5 mb-4 uppercase">{company}</div>
+          <div className="h3 mb-4">{title} </div>
+          <div className="flex flex-row gap-4">
+            {tags.map((tag) => (
+              <Chip background={tag.bg} key={tag.text}>
+                {tag.text}
+              </Chip>
+            ))}
           </div>
         </div>
       </div>
       <div className="flex flex-col items-center md:hidden">
-        <div className="text5 py-4">CLEAR FASHION</div>
-        <div className="h3 pb-4">Illustration set for mobile app </div>
-        <div>
-          <Chip>Illustration</Chip>
+        <div className="text5 py-4">{company}</div>
+        <div className="h3 pb-4">{title} </div>
+        <div className="flex flex-row gap-4">
+          {tags.map((tag) => (
+            <Chip background={tag.bg} key={tag.text}>
+              {tag.text}
+            </Chip>
+          ))}
         </div>
       </div>
     </div>
@@ -39,16 +59,20 @@ const Home: NextPage = () => {
     {
       title: "Illustration",
       description: "Illustration sets, Illustration systems",
+      image: "/home/icon_illustration.png",
     },
     {
       title: "Motion",
       description: "Lottie animations, GIFs",
+      image: "/home/icon_motion.png",
     },
     {
       title: "Icons",
+      image: "/home/icon_icons.png",
     },
     {
       title: "Patterns",
+      image: "/home/icon_patterns.png",
     },
   ];
 
@@ -56,14 +80,37 @@ const Home: NextPage = () => {
     {
       title: "UI Design",
       description: "Web and mobile mockups",
+      image: "/home/icon_uidesign.png",
     },
     {
       title: "Design systems",
       description: "UI kits, Scalable Design Systems",
+      image: "/home/icon_designsystems.png",
     },
     {
       title: "Webflow design",
       description: "Templates, Custom websites",
+      image: "/home/icon_webflow.png",
+    },
+  ];
+
+  const projects = [
+    {
+      title: "Mobile, web app and widget design",
+      company: "Clear Fashion",
+      tags: [
+        { text: "UI Design", bg: "fp-background-light-pink" },
+        { text: "Design system", bg: "fp-background-light-grey" },
+      ],
+      image: "/Project/Projet1/Banniere/coverprojet1.png",
+      link: "clear-fashion-product",
+    },
+    {
+      title: "Illustration set for mobile app",
+      company: "Clear Fashion",
+      tags: [{ text: "Illustration", bg: "fp-background-light-purple" }],
+      image: "/Project/Projet2/Banniere/coverprojet2.png",
+      link: "clear-fashion-illustration",
     },
   ];
 
@@ -75,9 +122,9 @@ const Home: NextPage = () => {
             <div className="mb-10 w-full flex-1 md:w-[520px]">
               <Image
                 priority
-                src="/home/Hero_grouped.webp"
-                width="2781"
-                height="1929"
+                src="/avatarfp.png"
+                width="184px"
+                height="236px"
                 alt="hero"
               />
             </div>
@@ -89,16 +136,19 @@ const Home: NextPage = () => {
             </h2>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-20 pt-80 md:grid-cols-2 md:gap-8">
-          {Array(2)
-            .fill("")
-            .map((_, i) => (
-              <Link href="/" key={i}>
-                <a>
-                  <CardProject />
-                </a>
-              </Link>
-            ))}
+        <div className="grid grid-cols-1 gap-20 pt-40 md:grid-cols-2 md:gap-8">
+          {projects.map((project, index) => (
+            <Link href={`/projects/${project.link}`} key={index}>
+              <a>
+                <CardProject
+                  title={project.title}
+                  company={project.company}
+                  tags={project.tags}
+                  image={project.image}
+                />
+              </a>
+            </Link>
+          ))}
         </div>
         {/* <div className="pt-12 text-center">
           <span className="cursor-pointer font-title underline">
@@ -111,14 +161,19 @@ const Home: NextPage = () => {
           <h2 className="font-title-bold text-2xl">Services</h2>
         </div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <div className="rounded-lg border-4 border-gray-900">
-            <div className="fp-background-light-blue h4 border-b-4 border-gray-900 p-6 text-center">
+          <div className="rounded-lg border-4 border-[#25283d]">
+            <div className="fp-background-light-blue h4 border-b-4 border-[#25283d] p-6 text-center">
               <h3>Digital assets</h3>
             </div>
             <div className="flex flex-col gap-4 p-8">
               {digitalAssets.map((asset) => (
                 <div className="flex items-center" key={asset.title}>
-                  <div className="mr-6 h-20 min-w-[5rem] rounded-lg bg-zinc-800" />
+                  <div className="mr-6 h-20 min-w-[5rem] rounded-lg">
+                    <img
+                      src={asset.image}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
                   <div>
                     <h4 className="text3">{asset.title}</h4>
                     {asset.description ? (
@@ -129,14 +184,19 @@ const Home: NextPage = () => {
               ))}
             </div>
           </div>
-          <div className="rounded-lg border-4 border-gray-900">
-            <div className="fp-background-light-blue h4 border-b-4 border-gray-900 p-6 text-center">
+          <div className="rounded-lg border-4 border-[#25283d]">
+            <div className="fp-background-light-blue h4 border-b-4 border-[#25283d] p-6 text-center">
               <h3>Interfaces</h3>
             </div>
             <div className="flex flex-col gap-4 p-8">
               {uiDesign.map((asset) => (
                 <div className="flex items-center" key={asset.title}>
-                  <div className="mr-6 h-20 min-w-[5rem] rounded-lg bg-zinc-800" />
+                  <div className="mr-6 h-20 min-w-[5rem] rounded-lg">
+                    <img
+                      src={asset.image}
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
                   <div>
                     <h4 className="text3">{asset.title}</h4>
                     {asset.description ? (
@@ -151,7 +211,7 @@ const Home: NextPage = () => {
       </section>
       <section className="flex flex-col items-center gap-8 pt-40 md:flex-row  md:pt-80">
         <div className="flex-[0.4]">
-          <Image src="/home/Profil_pic.png" width="1604" height="1492" />
+          <Image src="/home/photofp.png" width="475" height="552" />
         </div>
         <div className="flex-[0.6]">
           <h2 className="mb-4 font-title-bold text-2xl">
@@ -171,12 +231,11 @@ const Home: NextPage = () => {
               UI assets for the company’s products.
             </p>
             <p className="mb-4">
-              Even though I never thought I was destined to it, I fell in love
-              with illustration right away and decided to start a new journey as
-              a self-taught illustrator and UI asset creator. My product design
-              background acts as a landmark during my creative process, so I can
-              make sure to deliver consistent work and enhance the overall
-              experience.
+              I fell in love with illustration right away and decided to
+              supplement my skillset so I could work on the multiple creative
+              aspects that make a great interface. Thanks to my background, I
+              always make sure to deliver consistent, scalable assets that will
+              help the product and its users reach their goals.
             </p>{" "}
           </div>
         </div>
@@ -185,12 +244,12 @@ const Home: NextPage = () => {
         <div className="flex flex-col items-start gap-8 pt-40 md:flex-row md:pt-80">
           <div className="fp-background-light-purple flex-1 rounded-2xl px-6 pt-6 pb-16">
             <span className="inline-flex pb-4 text-[24px]">⭐️</span>
-            <p className="text3 border-l-4 border-gray-700 pl-4">
+            <p className="text3">
               “Working with Fflur was a true pleasure, her mockups, fun
               illustrations and skills on Figma were massive help to the
               integration of new features on our Products. Fflur is also a nice
               person to work with, open minded and reactive. I can only
-              recommend her !”
+              recommend her!”
             </p>
             <span className="inline-flex pt-4 font-title text-sm">
               THIBAUT, FRONT-END DEVELOPER @CLEAR FASHION
@@ -198,12 +257,12 @@ const Home: NextPage = () => {
           </div>
           <div className="fp-background-light-purple flex-1 rounded-2xl px-6 pt-6 pb-16">
             <span className="inline-flex pb-4 text-[24px]">⭐️</span>
-            <p className="text3 border-l-4 border-gray-700 pl-4">
-              “As a designer, Fflur was able to deliver fonctional and aesthetic
-              interfaces. She is creative in finding solutions during the design
-              process, her flexibility and efficacity make her a quality project
-              partner. Fflur always has a smile on her face and invests herself
-              in her work.”
+            <p className="text3">
+              “As a designer, Fflur was able to deliver functional and aesthetic
+              interfaces. She is creative problem solver, her flexibility and
+              efficiency during the design process made her a quality partner.
+              She always has a smile on her face and invests herself in her
+              work.”
             </p>
             <span className="inline-flex pt-4 font-title text-sm">
               JULIETTE, PRODUCT MANAGER @CLEAR FASHION
