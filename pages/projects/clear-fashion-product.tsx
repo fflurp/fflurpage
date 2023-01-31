@@ -126,12 +126,12 @@ const SectionImgText: React.FC<SectionImgTextProps> = ({
         isReverse ? `md:flex-row-reverse` : `md:flex-row`
       }`}
     >
-      <div className="flex-[0.4]">
+      <div className="flex-1">
         <div className="">
           <img src={img} />
         </div>
       </div>
-      <div className="flex-[0.6]">
+      <div className="flex-1">
         <h2 className="mb-8 font-title-bold text-3xl">{title}</h2>
         <div className="text-lg">{text}</div>
       </div>

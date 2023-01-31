@@ -168,7 +168,7 @@ const Home: NextPage = () => {
             <div className="flex flex-col gap-4 p-8">
               {digitalAssets.map((asset) => (
                 <div className="flex items-center" key={asset.title}>
-                  <div className="mr-6 h-20 min-w-[5rem] rounded-lg">
+                  <div className="mr-6 h-20 w-20 rounded-lg">
                     <img
                       src={asset.image}
                       className="h-full w-full object-cover"
@@ -191,7 +191,7 @@ const Home: NextPage = () => {
             <div className="flex flex-col gap-4 p-8">
               {uiDesign.map((asset) => (
                 <div className="flex items-center" key={asset.title}>
-                  <div className="mr-6 h-20 min-w-[5rem] rounded-lg">
+                  <div className="mr-6 h-20 w-20 rounded-lg">
                     <img
                       src={asset.image}
                       className="h-full w-full object-cover"
