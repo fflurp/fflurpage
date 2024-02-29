@@ -41,7 +41,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <div className="flex items-center justify-center pt-5 pb-10">
           <Navigation />
         </div>
-        <div>{children}</div>
+        {children}
       </main>
     </div>
   );
@@ -50,17 +50,15 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
 const Home = () => {
   return (
     <Layout>
-      <div className="flex auto-rows-[minmax(405px,_auto)] flex-col gap-5 md:grid">
-        <div className="row-span-2 bg-neutral-300">1</div>
-        <div className="bg-neutral-300 ">2</div>
-        <div className="bg-neutral-300 ">3</div>
-        <div className=" bg-neutral-300">4</div>
-        <div className="bg-neutral-300">5</div>
-        <div className="row-start-3 bg-neutral-300">6</div>
-        <div className="row-start-3 bg-neutral-300">7</div>
-        <div className="row-start-3 bg-neutral-300">8</div>
-        <div className="col-span-2 row-start-4 bg-neutral-300">9</div>
-        <div className="bg-neutral-300">10</div>
+      <div className="grid h-full grid-cols-3 grid-rows-[320px] gap-5">
+        <div className="col-span-1 row-span-2 bg-neutral-300">1</div>
+        <div className="col-span-2 row-span-1 bg-neutral-300 ">2</div>
+        <div className="col-span-1 row-span-1 bg-neutral-300 ">3</div>
+        <div className="col-span-1 row-span-1 bg-neutral-300">4</div>
+        <div className="col-span-2 row-span-1 bg-neutral-300">5</div>
+        <div className="col-span-1 row-span-2 bg-neutral-300">6</div>
+        <div className="row-span-1 bg-neutral-300">7</div>
+        <div className="row-span-1 bg-neutral-300">8</div>
       </div>
     </Layout>
   );
