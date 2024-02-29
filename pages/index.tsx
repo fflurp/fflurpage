@@ -1,9 +1,27 @@
-import React from "react";
+import Link from "next/link";
+
+const Navigation = () => {
+  return (
+    <nav className="flex w-full max-w-[540px] justify-between rounded-full border border-neutral-200 py-4 px-10">
+      <div className="inline-flex items-center">Fflur page</div>
+      <div className="flex items-center gap-6">
+        <Link href="/">
+          <span className="cursor-pointer rounded-full bg-neutral-200 px-4 py-1">
+            Work
+          </span>
+        </Link>
+        <Link href="/blog">
+          <span className="cursor-pointer rounded-full py-1">ressources</span>
+        </Link>
+      </div>
+    </nav>
+  );
+};
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="flex h-screen">
-      <div className="flex w-full max-w-[360px] flex-col p-10">
+      <div className="flex w-full max-w-[360px] flex-col border-r p-10">
         <div className="flex-1">
           <div className="h-36 w-36 bg-red-500" />
           <h2 className="pt-10 pb-4">
@@ -19,7 +37,12 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         </div>
         <div>linkedin</div>
       </div>
-      <main className="flex-auto overflow-auto">{children}</main>
+      <main className="flex-auto overflow-auto p-10">
+        <div className="flex items-center justify-center pt-5 pb-10">
+          <Navigation />
+        </div>
+        <div>{children}</div>
+      </main>
     </div>
   );
 };
