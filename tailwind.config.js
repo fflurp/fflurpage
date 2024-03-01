@@ -9,8 +9,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      title: ["Gordita Medium"],
-      ["title-bold"]: ["Gordita Bold"],
+      inter: "Inter",
     },
     colors: {
       mountain: {

@@ -1,4 +1,5 @@
 import { Layout } from "components/Layout";
+import { Chip } from "components/Chip";
 
 const gallery = [
   "projet2-2.png",
@@ -9,26 +10,21 @@ const gallery = [
   "projet2-7.png",
 ];
 
-const Label = () => {
-  return <div className="rounded-lg bg-neutral-50 py-2 px-4">2023 - Now</div>;
-};
-
 const ClearFashionPage = () => {
   return (
     <Layout>
       <div>
-        <span>crème de la crème</span>
-        <h1 className="pt-3">
+        <span className="text-label text-secondary">crème de la crème</span>
+        <h1 className="h1 text-primary pt-3">
           Matching top-tier freelancers with company needs
         </h1>
         <div className="mb-10 flex gap-4 pt-6">
-          <Label />
-          <Label />
-          <Label />
-          <Label />
-          <Label />
+          <Chip>2023 - Now</Chip>
+          <Chip>B2B, Saas</Chip>
+          <Chip>Multi-platform Design System</Chip>
+          <Chip>Solo Designer</Chip>
         </div>
-        <p className="pb-10">
+        <p className="text-primary pb-10">
           Amongst all the freelancing platforms, crème de la crème is probably
           the most selective. With a focus on digital skills in the product,
           tech, marketing and data fields, one of the main difference with its
@@ -37,7 +33,7 @@ const ClearFashionPage = () => {
           companies get full care and support from their assigned business
           manager to source the best freelancers out there.
         </p>
-        <p>
+        <p className="text-primary">
           When I joined the product team, there had been no designer for a
           while. Picture a Product Manager, a CTO and 4 fullstack developers
           doing all they possibly can to implement new features from scratch,

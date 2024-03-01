@@ -1,3 +1,4 @@
+import { Chip } from "components/Chip";
 import { Layout } from "components/Layout";
 
 const gallery = [
@@ -9,26 +10,21 @@ const gallery = [
   "projet2-7.png",
 ];
 
-const Label = () => {
-  return <div className="rounded-lg bg-neutral-50 py-2 px-4">2023 - Now</div>;
-};
-
 const ClearFashionPage = () => {
   return (
     <Layout>
       <div>
-        <span>CLEAR FASHION</span>
-        <h1 className="pt-3">
+        <span className="text-label text-secondary">CLEAR FASHION</span>
+        <h1 className="h1 text-primary pt-3 ">
           Solutions for a more sustainable fashion industry
         </h1>
         <div className="mb-10 flex gap-4 pt-6">
-          <Label />
-          <Label />
-          <Label />
-          <Label />
-          <Label />
+          <Chip>2020 - 2022</Chip>
+          <Chip>B2B, Consumer app</Chip>
+          <Chip>Design System Foundations</Chip>
+          <Chip>Solo Designer</Chip>
         </div>
-        <p className="pb-10">
+        <p className="text-primary pb-10">
           Clear Fashion’s core product targets consumers trying to make more
           sustainable shopping decisions. With the mobile app, users are able to
           get a clear understanding of the environmental impact of a piece of
@@ -38,7 +34,7 @@ const ClearFashionPage = () => {
           collect data from their supply chain and get a full understanding of
           its strengths and flaws.
         </p>
-        <p>
+        <p className="text-primary">
           I joined the team as the founding designer and dabbled for the first
           time with a design system built from scratch. I worked mainly on the
           consumer mobile app at first, designing key features such as
