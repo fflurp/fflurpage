@@ -18,6 +18,25 @@ const Navigation = () => {
   );
 };
 
+const CardCTA = () => {
+  return (
+    <div className="flex h-full">
+      <div className="flex h-full w-1/2 flex-col items-start justify-between p-10">
+        <div className="flex-1">
+          <div>logo</div>
+          <h2 className="mt-5">
+            Matching top-tier freelancers with company needs
+          </h2>
+        </div>
+        <button className="rounded-full bg-black py-3 px-6 text-white">
+          Discover project
+        </button>
+      </div>
+      <div className="h-full w-1/2 bg-red-200"></div>
+    </div>
+  );
+};
+
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="flex h-screen">
@@ -51,14 +70,18 @@ const Home = () => {
   return (
     <Layout>
       <div className="grid h-full grid-cols-3 grid-rows-[320px] gap-5">
-        <div className="col-span-1 row-span-2 bg-neutral-300">1</div>
-        <div className="col-span-2 row-span-1 bg-neutral-300 ">2</div>
-        <div className="col-span-1 row-span-1 bg-neutral-300 ">3</div>
-        <div className="col-span-1 row-span-1 bg-neutral-300">4</div>
-        <div className="col-span-2 row-span-1 bg-neutral-300">5</div>
-        <div className="col-span-1 row-span-2 bg-neutral-300">6</div>
-        <div className="row-span-1 bg-neutral-300">7</div>
-        <div className="row-span-1 bg-neutral-300">8</div>
+        <div className="col-span-1 row-span-2 rounded-2xl bg-neutral-100"></div>
+        <div className="col-span-2 row-span-1 rounded-2xl bg-neutral-100">
+          <CardCTA />
+        </div>
+        <div className="col-span-1 row-span-1 rounded-2xl bg-neutral-100"></div>
+        <div className="col-span-1 row-span-1 rounded-2xl bg-neutral-100"></div>
+        <div className="col-span-2 row-span-1 rounded-2xl bg-neutral-100">
+          <CardCTA />
+        </div>
+        <div className="col-span-1 row-span-2 rounded-2xl bg-neutral-100"></div>
+        <div className="row-span-1 rounded-2xl bg-neutral-100"></div>
+        <div className="row-span-1 rounded-2xl bg-neutral-100"></div>
       </div>
     </Layout>
   );
