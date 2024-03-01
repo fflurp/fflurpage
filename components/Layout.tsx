@@ -35,7 +35,7 @@ const Navigation = () => {
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex h-screen">
+    <div className="flex h-full min-h-screen">
       <div className="surface-secondary border-primary border-primary flex w-full max-w-[360px] flex-col border-r p-10">
         <div className="flex-1">
           <div className="h-36 w-36 bg-neutral-100" />
