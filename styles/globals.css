@@ -22,6 +22,32 @@
   src: url("/fonts/SuisseNeue-Light.otf");
 }
 
+@layer components {
+  .text-primary {
+    @apply text-mountain-700;
+  }
+
+  .text-secondary {
+    @apply text-mountain-600;
+  }
+
+  .surface-primary {
+    @apply bg-mountain-100;
+  }
+
+  .surface-secondary {
+    @apply bg-mountain-200;
+  }
+
+  .surface-tertiary {
+    @apply bg-mountain-300;
+  }
+
+  .border-primary {
+    @apply border-mountain-400;
+  }
+}
+
 @layer base {
   html {
     font-family: SuisseNeue-Light, system-ui, sans-serif;

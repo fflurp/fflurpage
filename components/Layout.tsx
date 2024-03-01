@@ -23,9 +23,9 @@ const Navigation = () => {
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="flex h-screen">
-      <div className="flex w-full max-w-[360px] flex-col border-r p-10">
+      <div className="surface-secondary border-primary border-primary flex w-full max-w-[360px] flex-col border-r p-10">
         <div className="flex-1">
-          <div className="h-36 w-36 bg-red-500" />
+          <div className="h-36 w-36 bg-neutral-100" />
           <h2 className="pt-10 pb-4">
             I’m Fflur — Product and System Designer based in Paris
           </h2>
@@ -39,7 +39,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
         </div>
         <div>linkedin</div>
       </div>
-      <main className="flex-auto overflow-auto p-10">
+      <main className="surface-primary flex-auto overflow-auto p-10">
         <div className="flex items-center justify-center pt-5 pb-10">
           <Navigation />
         </div>
