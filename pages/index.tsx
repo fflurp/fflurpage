@@ -1,67 +1,21 @@
+import { Layout } from "components/Layout";
 import Link from "next/link";
 
-const Navigation = () => {
-  return (
-    <nav className="flex w-full max-w-[540px] justify-between rounded-full border border-neutral-200 py-4 px-10">
-      <div className="inline-flex items-center">Fflur page</div>
-      <div className="flex items-center gap-6">
-        <Link href="/">
-          <span className="cursor-pointer rounded-full bg-neutral-200 px-4 py-1">
-            Work
-          </span>
-        </Link>
-        <Link href="/blog">
-          <span className="cursor-pointer rounded-full py-1">ressources</span>
-        </Link>
-      </div>
-    </nav>
-  );
-};
-
-const CardCTA = () => {
+const CardCTA = ({ title, slug }: { title: string; slug: string }) => {
   return (
     <div className="flex h-full">
       <div className="flex h-full w-1/2 flex-col items-start justify-between p-10">
         <div className="flex-1">
           <div>logo</div>
-          <h2 className="mt-5">
-            Matching top-tier freelancers with company needs
-          </h2>
+          <h2 className="mt-5">{title}</h2>
         </div>
-        <button className="rounded-full bg-black py-3 px-6 text-white">
-          Discover project
-        </button>
+        <Link href={`/projects/${slug}`}>
+          <button className="rounded-full bg-black py-3 px-6 text-white">
+            Discover project
+          </button>
+        </Link>
       </div>
       <div className="h-full w-1/2 bg-red-200"></div>
-    </div>
-  );
-};
-
-const Layout = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <div className="flex h-screen">
-      <div className="flex w-full max-w-[360px] flex-col border-r p-10">
-        <div className="flex-1">
-          <div className="h-36 w-36 bg-red-500" />
-          <h2 className="pt-10 pb-4">
-            I’m Fflur — Product and System Designer based in Paris
-          </h2>
-          <p>
-            After graduating from HETIC tech school, I worked on various
-            products for companies such as Clear Fashion and crème de la crème.
-            I’m particularly into design systems and also enjoy crafting product
-            illustrations on my spare time.{" "}
-          </p>
-          <div className="pt-10">Contact me</div>
-        </div>
-        <div>linkedin</div>
-      </div>
-      <main className="flex-auto overflow-auto p-10">
-        <div className="flex items-center justify-center pt-5 pb-10">
-          <Navigation />
-        </div>
-        {children}
-      </main>
     </div>
   );
 };
@@ -72,12 +26,18 @@ const Home = () => {
       <div className="grid h-full grid-cols-3 grid-rows-[320px] gap-5">
         <div className="col-span-1 row-span-2 rounded-2xl bg-neutral-100"></div>
         <div className="col-span-2 row-span-1 rounded-2xl bg-neutral-100">
-          <CardCTA />
+          <CardCTA
+            title="Matching top-tier freelancers with company needs"
+            slug="matching-top-tier-freelancers-company-needs"
+          />
         </div>
         <div className="col-span-1 row-span-1 rounded-2xl bg-neutral-100"></div>
         <div className="col-span-1 row-span-1 rounded-2xl bg-neutral-100"></div>
         <div className="col-span-2 row-span-1 rounded-2xl bg-neutral-100">
-          <CardCTA />
+          <CardCTA
+            title="Solutions for a more sustainable fashion industry"
+            slug="solutions-sustainable-fashion-industry"
+          />
         </div>
         <div className="col-span-1 row-span-2 rounded-2xl bg-neutral-100"></div>
         <div className="row-span-1 rounded-2xl bg-neutral-100"></div>
