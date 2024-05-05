@@ -45,23 +45,37 @@ const ClearFashionPage = () => {
           had documented on Storybook overtime as a starting point.{" "}
         </p>
       </div>
-      <div className="pb-8 pt-40">
+      <div className="flex flex-col space-y-5 pb-8 pt-40">
         <img
-          src={`/Project/Projet2/projet2-1.png`}
+          src="/projects/Creme/Creme_1.png"
           className="h-[500px] w-full rounded-lg object-cover"
         />
-      </div>
-      <div className="grid gap-8 md:grid-cols-2">
-        {gallery.map((img, index) => {
-          return (
-            <div key={index} className="flex overflow-hidden rounded-lg">
-              <img
-                src={`/Project/Projet2/${img}`}
-                className="h-full w-full object-cover"
-              />
-            </div>
-          );
-        })}
+        <img
+          src="/projects/Creme/Creme_2.png"
+          className="h-[500px] w-full rounded-lg object-cover"
+        />
+        <img
+          src="/projects/Creme/Creme_3.png"
+          className="h-[500px] w-full rounded-lg object-cover"
+        />
+        <div className="flex space-x-5">
+          <img
+            src="/projects/Creme/Creme_4.png"
+            className="h-[500px] w-full rounded-lg object-cover"
+          />
+          <img
+            src="/projects/Creme/Creme_5.png"
+            className="h-[500px] w-full rounded-lg object-cover"
+          />
+        </div>
+        <img
+          src="/projects/Creme/Creme_6.png"
+          className="h-[500px] w-full rounded-lg object-cover"
+        />
+        <img
+          src="/projects/Creme/Creme_7.png"
+          className="h-[500px] w-full rounded-lg object-cover"
+        />
       </div>
     </Layout>
   );

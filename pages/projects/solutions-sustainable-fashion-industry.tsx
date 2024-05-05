@@ -45,23 +45,39 @@ const ClearFashionPage = () => {
           widgets displayed on brand websites.
         </p>
       </div>
-      <div className="pb-8 pt-40">
+      <div className="flex flex-col space-y-5 pb-8 pt-40">
         <img
-          src={`/Project/Projet2/projet2-1.png`}
+          src="/projects/CF/CF_1.png"
           className="h-[500px] w-full rounded-lg object-cover"
         />
-      </div>
-      <div className="grid gap-8 md:grid-cols-2">
-        {gallery.map((img, index) => {
-          return (
-            <div key={index} className="flex overflow-hidden rounded-lg">
-              <img
-                src={`/Project/Projet2/${img}`}
-                className="h-full w-full object-cover"
-              />
-            </div>
-          );
-        })}
+        <div className="flex space-x-5">
+          <img
+            src="/projects/CF/CF_2.png"
+            className="h-[500px] w-full rounded-lg object-cover"
+          />
+          <img
+            src="/projects/CF/CF_3.png"
+            className="h-[500px] w-full rounded-lg object-cover"
+          />
+        </div>
+        <img
+          src="/projects/CF/CF_4.png"
+          className="h-[500px] w-full rounded-lg object-cover"
+        />
+        <div className="flex space-x-5">
+          <img
+            src="/projects/CF/CF_5.png"
+            className="h-[500px] w-full rounded-lg object-cover"
+          />
+          <img
+            src="/projects/CF/CF_6.png"
+            className="h-[500px] w-full rounded-lg object-cover"
+          />
+        </div>
+        <img
+          src="/projects/CF/CF_7.png"
+          className="h-[500px] w-full rounded-lg object-cover"
+        />
       </div>
     </Layout>
   );
