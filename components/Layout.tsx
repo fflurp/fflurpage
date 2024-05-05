@@ -1,5 +1,8 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import CopyIcon from "./icons/copy";
+import { useState } from "react";
+import CheckedIcon from "./icons/checked";
 
 const Navigation = () => {
   const router = useRouter();
@@ -32,6 +35,51 @@ const Navigation = () => {
     </nav>
   );
 };
+const ButtonContactMe = () => {
+  const [copySuccess, setCopySuccess] = useState(false);
+  const email = "fflur.page@gmail.com";
+
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopySuccess(true);
+
+      setTimeout(() => {
+        setCopySuccess(false);
+      }, 3000);
+    } catch (err) {
+      console.error("Failed to copy email: ", err);
+    }
+  };
+
+  return (
+    <div
+      className="border-primary surface-primary flex cursor-pointer rounded border py-2"
+      onClick={copyToClipboard}
+    >
+      <div className="text-button text-secondary px-4">Contact me</div>
+      <hr className="border-primary h-6 w-[0.5px] border" />
+      <div className="relative ml-4 px-4">
+        <div
+          className={`absolute inset-0 flex w-[180px] transform items-center transition-all duration-300 ${
+            !copySuccess ? "scale-0 opacity-0" : "scale-100 opacity-100"
+          }`}
+        >
+          <CheckedIcon />
+          <span className="body-2 text-secondary pl-2">Copied!</span>
+        </div>
+        <div
+          className={`absolute inset-0 flex w-[180px] transform items-center transition-all duration-300 ${
+            !copySuccess ? "scale-100 opacity-100" : "scale-0 opacity-0"
+          }`}
+        >
+          <CopyIcon />
+          <span className="body-2 text-secondary pl-2">Copy e-mail</span>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const SideBarDesktop = () => {
   return (
@@ -47,7 +95,9 @@ const SideBarDesktop = () => {
           particularly into design systems and also enjoy crafting product
           illustrations on my spare time.{" "}
         </p>
-        <div className="pt-10">Contact me</div>
+        <div className="pt-10 ">
+          <ButtonContactMe />
+        </div>
       </div>
       <div className="flex gap-2">
         <span>logo</span>
@@ -72,7 +122,9 @@ const CardMobile = () => {
           particularly into design systems and also enjoy crafting product
           illustrations on my spare time.{" "}
         </p>
-        <div className="pt-10">Contact me</div>
+        <div className="pt-10">
+          <ButtonContactMe />
+        </div>
       </div>
       <div className="flex gap-2">
         <span>logo</span>
