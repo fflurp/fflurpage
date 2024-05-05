@@ -3,6 +3,13 @@ import { useRouter } from "next/router";
 import CopyIcon from "./icons/copy";
 import { useState } from "react";
 import CheckedIcon from "./icons/checked";
+import LinkedinIcon from "./icons/linkedin";
+import XIcon from "./icons/x";
+import ReadCVIcon from "./icons/readcv";
+
+const linkedinUrl = "https://www.linkedin.com/in/fflurpage";
+const readCvUrl = "https://read.cv/fflurp";
+const xUrl = "https://twitter.com/fflurpage";
 
 const Navigation = () => {
   const router = useRouter();
@@ -83,9 +90,9 @@ const ButtonContactMe = () => {
 
 const SideBarDesktop = () => {
   return (
-    <div className="surface-secondary border-primary border-primary hidden w-full max-w-[360px] flex-col border-r p-10 md:flex">
+    <div className="surface-secondary border-primary border-primary hidden w-full min-w-[360px] flex-col border-r p-10 md:flex">
       <div className="flex-1">
-        <div className="h-36 w-36 bg-neutral-100" />
+        <img src="/Fflur.png" alt="Fflur" className="h-36 w-36" />
         <h2 className="text-secondary h3 pb-4 pt-10">
           I’m Fflur — Product and System Designer based in Paris
         </h2>
@@ -100,9 +107,15 @@ const SideBarDesktop = () => {
         </div>
       </div>
       <div className="flex gap-2">
-        <span>logo</span>
-        <span>logo</span>
-        <span>logo</span>
+        <a href={linkedinUrl} target="_blank" rel="noreferrer">
+          <LinkedinIcon />
+        </a>
+        <a href={readCvUrl} target="_blank" rel="noreferrer">
+          <XIcon />
+        </a>
+        <a href={xUrl} target="_blank" rel="noreferrer">
+          <ReadCVIcon />
+        </a>
       </div>
     </div>
   );
