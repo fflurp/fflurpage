@@ -90,7 +90,7 @@ const ButtonContactMe = () => {
 
 const SideBarDesktop = () => {
   return (
-    <div className="surface-secondary border-primary border-primary hidden w-full min-w-[360px] flex-col border-r p-10 md:flex">
+    <div className="surface-secondary border-primary border-primary hidden w-full min-w-[360px] flex-col border-r p-10 xl:flex">
       <div className="flex-1">
         <img src="/Fflur.png" alt="Fflur" className="h-36 w-36" />
         <h2 className="text-secondary h3 pb-4 pt-10">
@@ -123,7 +123,7 @@ const SideBarDesktop = () => {
 
 const CardMobile = () => {
   return (
-    <div className="surface-secondary border-primary border-primary flex w-full flex-col border-r p-10 md:hidden ">
+    <div className="surface-secondary border-primary border-primary flex w-full flex-col border-r p-10 xl:hidden ">
       <div className="flex-1">
         <div className="h-36 w-36 bg-neutral-100" />
         <h2 className="text-secondary h3 pb-4 pt-10">
@@ -150,7 +150,7 @@ const CardMobile = () => {
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex h-full min-h-screen flex-col md:flex-row">
+    <div className="flex h-full min-h-screen flex-col xl:flex-row">
       <SideBarDesktop />
       <main className="surface-primary flex-auto overflow-auto p-10">
         {/* <div className="flex items-center justify-center pb-10 pt-5">

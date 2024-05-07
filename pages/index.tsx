@@ -33,7 +33,7 @@ const CardCTA = ({
 const Home = () => {
   return (
     <Layout>
-      <div className="grid h-full grid-cols-3 grid-rows-[320px] gap-5">
+      <div className="grid h-full grid-cols-2 grid-rows-[320px] gap-5 md:grid-cols-3">
         <div className="surface-tertiary col-span-1 row-span-2 overflow-hidden rounded-2xl">
           <img
             src="/home/creme/Snapshot_Creme_1.png"
@@ -41,7 +41,7 @@ const Home = () => {
             className="h-full w-full object-cover"
           />
         </div>
-        <div className="surface-tertiary col-span-2 row-span-1 overflow-hidden rounded-2xl">
+        <div className="surface-tertiary order-first col-span-2 row-span-1 overflow-hidden rounded-2xl md:order-none">
           <CardCTA
             title="Matching top-tier freelancers with company needs"
             slug="matching-top-tier-freelancers-company-needs"
