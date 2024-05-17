@@ -123,8 +123,8 @@ const SideBarDesktop = () => {
 
 const CardMobile = () => {
   return (
-    <div className="surface-secondary border-primary border-primary flex w-full flex-col border-r p-10 xl:hidden ">
-      <div className="flex-1">
+    <div className="surface-secondary border-primary border-primary flex w-full flex-col border-r border-t p-10 xl:hidden ">
+      <div className="flex flex-1 flex-col items-center justify-center">
         <div className="h-36 w-36 bg-neutral-100" />
         <h2 className="text-secondary h3 pb-4 pt-10">
           I’m Fflur — Product and System Designer based in Paris
@@ -135,15 +135,16 @@ const CardMobile = () => {
           particularly into design systems and also enjoy crafting product
           illustrations on my spare time.{" "}
         </p>
-        <div className="pt-10">
+        <div className="w-1/2 pt-10">
           <ButtonContactMe />
         </div>
       </div>
-      <div className="flex gap-2">
+      <div className="flex justify-center gap-2 pt-10">
         <span>logo</span>
         <span>logo</span>
         <span>logo</span>
       </div>
+      <span className="pt-20 text-center">© fflur page 2023</span>
     </div>
   );
 };
@@ -152,7 +153,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="flex h-full min-h-screen flex-col xl:flex-row">
       <SideBarDesktop />
-      <main className="surface-primary flex-auto overflow-auto p-10">
+      <main className="surface-primary flex-auto overflow-auto p-6 md:p-10">
         {/* <div className="flex items-center justify-center pb-10 pt-5">
           <Navigation />
         </div> */}

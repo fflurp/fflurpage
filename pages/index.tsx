@@ -33,8 +33,8 @@ const CardCTA = ({
 const Home = () => {
   return (
     <Layout>
-      <div className="grid h-full grid-cols-2 grid-rows-[320px] gap-5 md:grid-cols-3">
-        <div className="surface-tertiary col-span-1 row-span-2 overflow-hidden rounded-2xl">
+      <div className="grid h-full grid-cols-2 grid-rows-[460px] gap-5 md:grid-cols-3 md:grid-rows-[320px]">
+        <div className="surface-tertiary col-span-1 row-span-2 hidden overflow-hidden rounded-2xl sm:flex">
           <img
             src="/home/creme/Snapshot_Creme_1.png"
             alt="Snapshot_Creme_1"
@@ -48,14 +48,14 @@ const Home = () => {
             img="/home/creme/Creme_Card_Img.png"
           />
         </div>
-        <div className="surface-tertiary col-span-1 row-span-1 overflow-hidden rounded-2xl">
+        <div className="surface-tertiary col-span-1 row-span-1 hidden overflow-hidden rounded-2xl sm:flex">
           <img
             src="/home/creme/Snapshot_Creme_2.png"
             alt="Snapshot_CF_1"
             className="h-full w-full object-cover"
           />
         </div>
-        <div className="surface-tertiary col-span-1 row-span-1 overflow-hidden rounded-2xl">
+        <div className="surface-tertiary col-span-1 row-span-1 hidden overflow-hidden rounded-2xl sm:flex">
           <img
             src="/home/creme/Snapshot_Creme_3.png"
             alt="Snapshot_CF_1"
@@ -69,22 +69,21 @@ const Home = () => {
             img="/home/cf/CF_Card_Img.png"
           />
         </div>
-        <div className="surface-tertiary col-span-1 row-span-2 overflow-hidden rounded-2xl ">
+        <div className="surface-tertiary col-span-1 row-span-2 hidden overflow-hidden rounded-2xl sm:flex">
           <img
             src="/home/cf/Snapshot_CF_1.png"
             alt="Snapshot_CF_1"
             className="h-full w-full object-cover"
           />
         </div>
-        <div className="surface-tertiary col-span-1 row-span-1 overflow-hidden rounded-2xl">
+        <div className="surface-tertiary col-span-1 row-span-1 hidden overflow-hidden rounded-2xl sm:flex">
           <img
             src="/home/cf/Snapshot_CF_2.png"
             alt="Snapshot_CF_1"
             className="h-full w-full object-cover"
           />
         </div>
-
-        <div className="surface-tertiary col-span-1 row-span-1 overflow-hidden rounded-2xl">
+        <div className="surface-tertiary col-span-1 row-span-1 hidden overflow-hidden rounded-2xl sm:flex">
           <img
             src="/home/cf/Snapshot_CF_3.png"
             alt="Snapshot_CF_1"
