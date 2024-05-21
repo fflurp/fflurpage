@@ -42,6 +42,7 @@ const Navigation = () => {
     </nav>
   );
 };
+
 const ButtonContactMe = () => {
   const [copySuccess, setCopySuccess] = useState(false);
   const email = "fflur.page@gmail.com";
@@ -90,7 +91,7 @@ const ButtonContactMe = () => {
 
 const SideBarDesktop = () => {
   return (
-    <div className="surface-secondary border-primary border-primary hidden w-full min-w-[360px] flex-col border-r p-10 xl:flex">
+    <div className="surface-secondary border-primary border-primary flex h-full w-full flex-col flex-col border-r p-10">
       <div className="flex-1">
         <img src="/Fflur.png" alt="Fflur" className="h-36 w-36" />
         <h2 className="text-secondary h3 pb-4 pt-10">
@@ -123,7 +124,7 @@ const SideBarDesktop = () => {
 
 const CardMobile = () => {
   return (
-    <div className="surface-secondary border-primary border-primary flex w-full flex-col border-r border-t p-10 xl:hidden ">
+    <div className="surface-secondary border-primary border-primary flex w-full flex-col border-r border-t p-10">
       <div className="flex flex-1 flex-col items-center justify-center">
         <img src="/Fflur.png" alt="Fflur" className="h-36 w-36" />
         <h2 className="text-secondary h3 pb-4 pt-10">
@@ -140,26 +141,38 @@ const CardMobile = () => {
         </div>
       </div>
       <div className="flex justify-center gap-2 pt-10">
-        <span>logo</span>
-        <span>logo</span>
-        <span>logo</span>
+        <a href={linkedinUrl} target="_blank" rel="noreferrer">
+          <LinkedinIcon />
+        </a>
+        <a href={readCvUrl} target="_blank" rel="noreferrer">
+          <XIcon />
+        </a>
+        <a href={xUrl} target="_blank" rel="noreferrer">
+          <ReadCVIcon />
+        </a>
       </div>
-      <span className="pt-20 text-center">© fflur page 2023</span>
+      <span className="text-primary pt-20 text-center">
+        © fflur page {new Date().getFullYear()}
+      </span>
     </div>
   );
 };
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex h-full min-h-screen flex-col xl:flex-row">
-      <SideBarDesktop />
-      <main className="surface-primary flex-auto overflow-auto p-6 md:p-10">
+    <div className="m-auto grid min-h-screen w-full grid-cols-1 xl:grid-cols-[360px_1fr]">
+      <div className="sticky top-0 hidden h-screen xl:flex">
+        <SideBarDesktop />
+      </div>
+      <main className="surface-primary overflow-auto p-6 md:p-10">
         {/* <div className="flex items-center justify-center pb-10 pt-5">
           <Navigation />
         </div> */}
         {children}
       </main>
-      <CardMobile />
+      <div className="flex xl:hidden">
+        <CardMobile />
+      </div>
     </div>
   );
 };

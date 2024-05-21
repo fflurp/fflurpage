@@ -29,7 +29,7 @@ const ClearFashionPage = () => {
         <h1 className="h1 text-primary pt-3 ">
           Solutions for a more sustainable fashion industry
         </h1>
-        <div className="mb-10 flex gap-4 pt-6">
+        <div className="mb-10 flex flex-wrap gap-4 pt-6">
           <Chip>
             <CalendarIcon />
             <span className="ml-2">2020 - 2022</span>
@@ -73,29 +73,37 @@ const ClearFashionPage = () => {
           src="/projects/CF/CF_1.png"
           className="h-[500px] w-full rounded-lg object-cover"
         />
-        <div className="flex space-x-5">
-          <img
-            src="/projects/CF/CF_2.png"
-            className="h-[500px] w-full rounded-lg object-cover"
-          />
-          <img
-            src="/projects/CF/CF_3.png"
-            className="h-[500px] w-full rounded-lg object-cover"
-          />
+        <div className="flex flex-col space-y-5 xl:flex-row xl:space-x-5 xl:space-y-0">
+          <div className="w-full flex-1 xl:w-1/2">
+            <img
+              src="/projects/CF/CF_2.png"
+              className="h-[500px] w-full rounded-lg object-cover"
+            />
+          </div>
+          <div className="w-full flex-1 xl:w-1/2">
+            <img
+              src="/projects/CF/CF_3.png"
+              className="h-[500px] w-full rounded-lg object-cover"
+            />
+          </div>
         </div>
         <img
           src="/projects/CF/CF_4.png"
           className="h-[500px] w-full rounded-lg object-cover"
         />
-        <div className="flex space-x-5">
-          <img
-            src="/projects/CF/CF_5.png"
-            className="h-[500px] w-full rounded-lg object-cover"
-          />
-          <img
-            src="/projects/CF/CF_6.png"
-            className="h-[500px] w-full rounded-lg object-cover"
-          />
+        <div className="flex flex-col space-y-5 xl:flex-row xl:space-x-5 xl:space-y-0">
+          <div className="w-full flex-1 xl:w-1/2">
+            <img
+              src="/projects/CF/CF_5.png"
+              className="h-[500px] w-full rounded-lg object-cover"
+            />
+          </div>
+          <div className="w-full flex-1 xl:w-1/2">
+            <img
+              src="/projects/CF/CF_6.png"
+              className="h-[500px] w-full rounded-lg object-cover"
+            />
+          </div>
         </div>
         <img
           src="/projects/CF/CF_7.png"

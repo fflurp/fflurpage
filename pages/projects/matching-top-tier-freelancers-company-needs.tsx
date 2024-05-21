@@ -29,7 +29,7 @@ const ClearFashionPage = () => {
         <h1 className="h1 text-primary pt-3">
           Matching top-tier freelancers with company needs
         </h1>
-        <div className="mb-10 flex gap-4 pt-6">
+        <div className="mb-10 flex flex-wrap gap-4 pt-6">
           <Chip>
             <CalendarIcon />
             <span className="ml-2">2023 - Now</span>
@@ -81,15 +81,19 @@ const ClearFashionPage = () => {
           src="/projects/Creme/Creme_3.png"
           className="h-[500px] w-full rounded-lg object-cover"
         />
-        <div className="flex space-x-5">
-          <img
-            src="/projects/Creme/Creme_4.png"
-            className="h-[500px] w-full rounded-lg object-cover"
-          />
-          <img
-            src="/projects/Creme/Creme_5.png"
-            className="h-[500px] w-full rounded-lg object-cover"
-          />
+        <div className="flex flex-col space-y-5 xl:flex-row xl:space-x-5 xl:space-y-0">
+          <div className="w-full flex-1 xl:w-1/2">
+            <img
+              src="/projects/Creme/Creme_4.png"
+              className="h-[500px] w-full rounded-lg object-cover"
+            />
+          </div>
+          <div className="w-full flex-1 xl:w-1/2">
+            <img
+              src="/projects/Creme/Creme_5.png"
+              className="h-[500px] w-full rounded-lg object-cover"
+            />
+          </div>
         </div>
         <img
           src="/projects/Creme/Creme_6.png"
