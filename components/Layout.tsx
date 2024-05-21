@@ -61,7 +61,7 @@ const ButtonContactMe = () => {
 
   return (
     <div
-      className="border-primary surface-primary flex cursor-pointer rounded border py-2"
+      className="border-primary surface-primary flex w-[250px] cursor-pointer rounded border py-2"
       onClick={copyToClipboard}
     >
       <div className="text-button text-secondary px-4">Contact me</div>
@@ -125,7 +125,7 @@ const CardMobile = () => {
   return (
     <div className="surface-secondary border-primary border-primary flex w-full flex-col border-r border-t p-10 xl:hidden ">
       <div className="flex flex-1 flex-col items-center justify-center">
-        <div className="h-36 w-36 bg-neutral-100" />
+        <img src="/Fflur.png" alt="Fflur" className="h-36 w-36" />
         <h2 className="text-secondary h3 pb-4 pt-10">
           I’m Fflur — Product and System Designer based in Paris
         </h2>
@@ -135,7 +135,7 @@ const CardMobile = () => {
           particularly into design systems and also enjoy crafting product
           illustrations on my spare time.{" "}
         </p>
-        <div className="w-1/2 pt-10">
+        <div className="pt-10">
           <ButtonContactMe />
         </div>
       </div>

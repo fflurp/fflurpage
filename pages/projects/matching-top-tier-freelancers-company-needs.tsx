@@ -1,5 +1,11 @@
 import { Layout } from "components/Layout";
 import { Chip } from "components/Chip";
+import ArrowLeftIcon from "components/icons/arrow-left";
+import Link from "next/link";
+import CalendarIcon from "components/icons/calendar";
+import TagIcon from "components/icons/tag";
+import ComponentIcon from "components/icons/component";
+import UserOneIcon from "components/icons/user-1";
 
 const gallery = [
   "projet2-2.png",
@@ -14,15 +20,32 @@ const ClearFashionPage = () => {
   return (
     <Layout>
       <div>
+        <button className="mb-6 flex">
+          <Link href="/">
+            <ArrowLeftIcon />
+          </Link>
+        </button>
         <span className="text-label text-secondary">crème de la crème</span>
         <h1 className="h1 text-primary pt-3">
           Matching top-tier freelancers with company needs
         </h1>
         <div className="mb-10 flex gap-4 pt-6">
-          <Chip>2023 - Now</Chip>
-          <Chip>B2B, Saas</Chip>
-          <Chip>Multi-platform Design System</Chip>
-          <Chip>Solo Designer</Chip>
+          <Chip>
+            <CalendarIcon />
+            <span className="ml-2">2023 - Now</span>
+          </Chip>
+          <Chip>
+            <TagIcon />
+            <span className="ml-2">B2B, Saas</span>
+          </Chip>
+          <Chip>
+            <ComponentIcon />
+            <span className="ml-2">Multi-platform Design System</span>
+          </Chip>
+          <Chip>
+            <UserOneIcon />
+            <span className="ml-2">Solo Designer</span>
+          </Chip>
         </div>
         <p className="text-primary pb-10">
           Amongst all the freelancing platforms, crème de la crème is probably

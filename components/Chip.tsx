@@ -1,10 +1,10 @@
 type ChipProps = {
-  children: string;
+  children: string | React.ReactNode;
 };
 
 export const Chip: React.FC<ChipProps> = ({ children }) => {
   return (
-    <div className="text-primary surface-tertiary border-primary rounded-lg border py-2 px-4">
+    <div className="text-primary surface-tertiary border-primary inline-flex items-center rounded-lg border px-4 py-2">
       {children}
     </div>
   );

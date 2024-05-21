@@ -1,5 +1,11 @@
 import { Chip } from "components/Chip";
 import { Layout } from "components/Layout";
+import ArrowLeftIcon from "components/icons/arrow-left";
+import CalendarIcon from "components/icons/calendar";
+import ComponentIcon from "components/icons/component";
+import TagIcon from "components/icons/tag";
+import UserOneIcon from "components/icons/user-1";
+import Link from "next/link";
 
 const gallery = [
   "projet2-2.png",
@@ -14,15 +20,32 @@ const ClearFashionPage = () => {
   return (
     <Layout>
       <div>
+        <button className="mb-6 flex">
+          <Link href="/">
+            <ArrowLeftIcon />
+          </Link>
+        </button>
         <span className="text-label text-secondary">CLEAR FASHION</span>
         <h1 className="h1 text-primary pt-3 ">
           Solutions for a more sustainable fashion industry
         </h1>
         <div className="mb-10 flex gap-4 pt-6">
-          <Chip>2020 - 2022</Chip>
-          <Chip>B2B, Consumer app</Chip>
-          <Chip>Design System Foundations</Chip>
-          <Chip>Solo Designer</Chip>
+          <Chip>
+            <CalendarIcon />
+            <span className="ml-2">2020 - 2022</span>
+          </Chip>
+          <Chip>
+            <TagIcon />
+            <span className="ml-2">B2B, Consumer app</span>
+          </Chip>
+          <Chip>
+            <ComponentIcon />
+            <span className="ml-2">Design System Foundations</span>
+          </Chip>
+          <Chip>
+            <UserOneIcon />
+            <span className="ml-2">Solo Designer</span>
+          </Chip>
         </div>
         <p className="text-primary pb-10">
           Clear Fashion’s core product targets consumers trying to make more
