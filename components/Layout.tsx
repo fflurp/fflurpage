@@ -1,94 +1,178 @@
 import Link from "next/link";
-import Image from "next/image";
-import React, { forwardRef } from "react";
+import { useRouter } from "next/router";
+import CopyIcon from "./icons/copy";
+import { useState } from "react";
+import CheckedIcon from "./icons/checked";
+import LinkedinIcon from "./icons/linkedin";
+import XIcon from "./icons/x";
+import ReadCVIcon from "./icons/readcv";
 
-interface LayoutProps {
-  children: React.ReactNode;
-  hero?: React.ReactNode;
-}
+const linkedinUrl = "https://www.linkedin.com/in/fflurpage";
+const readCvUrl = "https://read.cv/fflurp";
+const xUrl = "https://twitter.com/fflurpage";
 
-const Layout: React.FC<LayoutProps> = ({ children, hero }) => {
+const Navigation = () => {
+  const router = useRouter();
+
   return (
-    <div className="fp-background-cream fp-text-black">
-      <header className="mx-auto max-w-screen-xl py-6 px-8">
-        <nav className="flex w-full items-center justify-between">
-          <Link href="/">
-            <a>
-              <div className="flex items-center">
-                <span className="text7">fflur page</span>
-              </div>
-            </a>
-          </Link>
-          <div>
-            <Link href="/blog">
-              <LinkFP className="text4 sm:mr-10">Blog posts{"  ✍️"}</LinkFP>
-            </Link>
-          </div>
-        </nav>
-      </header>
-      {hero ? <div className="flex h-[222px] md:h-[444px]">{hero}</div> : null}
-      <main className="mx-auto max-w-screen-xl px-4 md:px-8">{children}</main>
-      <footer className="relative">
-        <div className="z-10 mx-auto flex max-w-screen-xl justify-between px-8">
-          <div className="z-10 mb-10 font-title">
-            © fflur page {new Date().getFullYear()}
-          </div>
-          <div className="mb-10 flex gap-4">
-            <a
-              href="https://www.linkedin.com/in/fflurpage/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Image src="/Linkedin.png" width={24} height={24} />
-            </a>
-            <a
-              href="https://twitter.com/fflurpage"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Image src="/Twitter.png" width={24} height={24} />
-            </a>
-            <a
-              href="https://dribbble.com/fflurpage"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Image src="/Dribbble.png" width={24} height={24} />
-            </a>
-          </div>
+    <nav className="border-primary flex w-full max-w-[540px] justify-between rounded-full border px-10 py-4">
+      <div className="text-button inline-flex items-center">
+        <Link href="/">Fflur page</Link>
+      </div>
+      <div className="flex items-center gap-2">
+        <Link href="/">
+          <span
+            className={`text-primary cursor-pointer rounded-full px-4 py-1 ${
+              router.pathname === "/" ? `surface-tertiary` : ``
+            }`}
+          >
+            Work
+          </span>
+        </Link>
+        <Link href="/blog">
+          <span
+            className={`text-primary cursor-pointer rounded-full px-4 py-1 ${
+              router.pathname === "/blog" ? `surface-tertiary ` : ``
+            }`}
+          >
+            Blog
+          </span>
+        </Link>
+      </div>
+    </nav>
+  );
+};
+
+const ButtonContactMe = () => {
+  const [copySuccess, setCopySuccess] = useState(false);
+  const email = "fflur.page@gmail.com";
+
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(email);
+      setCopySuccess(true);
+
+      setTimeout(() => {
+        setCopySuccess(false);
+      }, 3000);
+    } catch (err) {
+      console.error("Failed to copy email: ", err);
+    }
+  };
+
+  return (
+    <div
+      className="border-primary surface-primary flex w-[250px] cursor-pointer rounded-full border py-2"
+      onClick={copyToClipboard}
+    >
+      <div className="text-button text-secondary px-4">Contact me</div>
+      <hr className="border-primary h-6 w-[0.5px] border" />
+      <div className="relative ml-4 px-4">
+        <div
+          className={`absolute inset-0 flex w-[180px] transform items-center transition-all duration-300 ${
+            !copySuccess ? "scale-0 opacity-0" : "scale-100 opacity-100"
+          }`}
+        >
+          <CheckedIcon />
+          <span className="body-2 text-secondary pl-2">Copied!</span>
         </div>
-      </footer>
+        <div
+          className={`absolute inset-0 flex w-[180px] transform items-center transition-all duration-300 ${
+            !copySuccess ? "scale-100 opacity-100" : "scale-0 opacity-0"
+          }`}
+        >
+          <CopyIcon />
+          <span className="body-2 text-secondary pl-2">Copy e-mail</span>
+        </div>
+      </div>
     </div>
   );
 };
 
-type LinkFPProps = {
-  children: React.ReactNode;
-  href?: string;
-  className: string;
-} & React.ComponentPropsWithRef<"a">;
+const SideBarDesktop = () => {
+  return (
+    <div className="surface-secondary border-primary border-primary flex h-full w-full flex-col flex-col border-r p-10">
+      <div className="flex-1">
+        <img src="/Fflur.png" alt="Fflur" className="h-36 w-36" />
+        <h2 className="text-secondary h3 pb-4 pt-10">
+          I’m Fflur — Product Designer based in Paris
+        </h2>
+        <p className="body-2 text-secondary">
+          After graduating from HETIC tech school, I worked on various products
+          for companies such as Clear Fashion and crème de la crème. I’m
+          particularly into design systems and also enjoy crafting product
+          illustrations on my spare time.{" "}
+        </p>
+        <div className="pt-10 ">
+          <ButtonContactMe />
+        </div>
+      </div>
+      <div className="flex gap-2">
+        <a href={linkedinUrl} target="_blank" rel="noreferrer">
+          <LinkedinIcon />
+        </a>
+        <a href={readCvUrl} target="_blank" rel="noreferrer">
+          <XIcon />
+        </a>
+        <a href={xUrl} target="_blank" rel="noreferrer">
+          <ReadCVIcon />
+        </a>
+      </div>
+    </div>
+  );
+};
 
-// eslint-disable-next-line react/display-name
-const LinkFP = forwardRef<HTMLAnchorElement, LinkFPProps>(
-  ({ children, className, ...props }, ref) => {
-    return (
-      <a
-        ref={ref}
-        className={`${className}
-          cursor-pointer
-          bg-gradient-to-r from-neutral-800 to-neutral-600
-          bg-[length:0px_1px]
-          bg-left-bottom
-          bg-no-repeat
-          transition-[background-size]
-          duration-500
-          hover:bg-[length:100%_1px]`}
-        {...props}
-      >
+const CardMobile = () => {
+  return (
+    <div className="surface-secondary border-primary border-primary flex w-full flex-col border-r border-t p-10">
+      <div className="flex flex-1 flex-col items-center justify-center">
+        <img src="/Fflur.png" alt="Fflur" className="h-36 w-36" />
+        <h2 className="text-secondary h3 pb-4 pt-10">
+          I’m Fflur — Product Designer based in Paris
+        </h2>
+        <p className="body-2 text-secondary">
+          After graduating from HETIC tech school, I worked on various products
+          for companies such as Clear Fashion and crème de la crème. I’m
+          particularly into design systems and also enjoy crafting product
+          illustrations on my spare time.{" "}
+        </p>
+        <div className="pt-10">
+          <ButtonContactMe />
+        </div>
+      </div>
+      <div className="flex justify-center gap-2 pt-10">
+        <a href={linkedinUrl} target="_blank" rel="noreferrer">
+          <LinkedinIcon />
+        </a>
+        <a href={readCvUrl} target="_blank" rel="noreferrer">
+          <XIcon />
+        </a>
+        <a href={xUrl} target="_blank" rel="noreferrer">
+          <ReadCVIcon />
+        </a>
+      </div>
+      <span className="text-primary pt-20 text-center">
+        © fflur page {new Date().getFullYear()}
+      </span>
+    </div>
+  );
+};
+
+export const Layout = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <div className="m-auto grid min-h-screen w-full grid-cols-1 xl:grid-cols-[360px_1fr]">
+      <div className="sticky top-0 hidden h-screen xl:flex">
+        <SideBarDesktop />
+      </div>
+      <main className="surface-primary overflow-auto p-6 md:p-10">
+        {/* <div className="flex items-center justify-center pb-10 pt-5">
+          <Navigation />
+        </div> */}
         {children}
-      </a>
-    );
-  }
-);
-
-export default Layout;
+      </main>
+      <div className="flex xl:hidden">
+        <CardMobile />
+      </div>
+    </div>
+  );
+};

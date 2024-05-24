@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
+import "@fontsource-variable/inter";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -13,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           sizes="32x32"
           href="/favicon-32x32.png"
         />
-        <title>Fflur Page | Product Designer & illustrator</title>
+        <title>Fflur Page | Product Designer</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Component {...pageProps} />

@@ -1,18 +1,11 @@
-import React from "react";
-
 type ChipProps = {
-  children: string;
-  background: string;
+  children: string | React.ReactNode;
 };
 
-const Chip: React.FC<ChipProps> = ({ children, background }) => {
+export const Chip: React.FC<ChipProps> = ({ children }) => {
   return (
-    <div
-      className={`getBgColorgetBgColor inline-flex rounded-lg p-2 font-title text-sm ${background}`}
-    >
+    <div className="text-primary surface-tertiary border-primary inline-flex items-center rounded-full border px-4 py-2">
       {children}
     </div>
   );
 };
-
-export default Chip;

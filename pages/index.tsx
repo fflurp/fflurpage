@@ -1,276 +1,149 @@
-import type { NextPage } from "next";
+import { Layout } from "components/Layout";
 import Link from "next/link";
-import Image from "next/image";
-import Layout from "components/Layout";
-import CTAMail from "components/CTAMail";
-import Chip from "components/Chip";
 
-type CardProjectProps = {
-  title: string;
-  company: string;
-  tags: { text: string; bg: string }[];
-  image: string;
-};
-
-const CardProject: React.FC<CardProjectProps> = ({
-  title,
-  company,
-  tags,
-  image,
-}) => {
+const ButtonArrowRight = () => {
   return (
-    <div className="group flex w-full flex-col transition">
-      <div className="relative h-[298px] md:h-[500px]">
-        <div className="absolute z-10 hidden h-full w-full bg-white opacity-0 transition group-hover:opacity-50 group-hover:blur-sm md:block" />
-        <img
-          src={image}
-          alt="project"
-          className="absolute z-0 h-full w-full object-cover transition md:group-hover:blur-sm"
-        />
-        <div className="invisible absolute z-20 hidden p-8 transition group-hover:visible md:invisible md:flex md:flex-col">
-          <div className="text5 mb-4 uppercase">{company}</div>
-          <div className="h3 mb-4">{title} </div>
-          <div className="flex flex-row gap-4">
-            {tags.map((tag) => (
-              <Chip background={tag.bg} key={tag.text}>
-                {tag.text}
-              </Chip>
-            ))}
-          </div>
-        </div>
+    <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-full bg-mountain-700 px-6 font-medium text-mountain-100">
+      <div className="mr-0 w-0 -translate-x-[100%] opacity-0 transition-all duration-200 group-hover:mr-1 group-hover:w-5 group-hover:translate-x-0 group-hover:opacity-100">
+        <svg
+          width="15"
+          height="15"
+          viewBox="0 0 15 15"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-5 w-5"
+        >
+          <path
+            d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z"
+            fill="currentColor"
+            fillRule="evenodd"
+            clipRule="evenodd"
+          ></path>
+        </svg>
       </div>
-      <div className="flex flex-col items-center md:hidden">
-        <div className="text5 py-4">{company}</div>
-        <div className="h3 pb-4">{title} </div>
-        <div className="flex flex-row gap-4">
-          {tags.map((tag) => (
-            <Chip background={tag.bg} key={tag.text}>
-              {tag.text}
-            </Chip>
-          ))}
-        </div>
-      </div>
-    </div>
+      <span>Discover project</span>
+    </button>
   );
 };
 
-const Home: NextPage = () => {
-  const digitalAssets = [
-    {
-      title: "Illustration",
-      description: "Illustration sets, Illustration systems",
-      image: "/home/icon_illustration.png",
-    },
-    {
-      title: "Motion",
-      description: "Lottie animations, GIFs",
-      image: "/home/icon_motion.png",
-    },
-    {
-      title: "Icons",
-      image: "/home/icon_icons.png",
-    },
-    {
-      title: "Patterns",
-      image: "/home/icon_patterns.png",
-    },
-  ];
-
-  const uiDesign = [
-    {
-      title: "UI Design",
-      description: "Web and mobile mockups",
-      image: "/home/icon_uidesign.png",
-    },
-    {
-      title: "Design systems",
-      description: "UI kits, Scalable Design Systems",
-      image: "/home/icon_designsystems.png",
-    },
-    {
-      title: "Webflow design",
-      description: "Templates, Custom websites",
-      image: "/home/icon_webflow.png",
-    },
-  ];
-
-  const projects = [
-    {
-      title: "Mobile, web app and widget design",
-      company: "Clear Fashion",
-      tags: [
-        { text: "UI Design", bg: "fp-background-light-pink" },
-        { text: "Design system", bg: "fp-background-light-grey" },
-      ],
-      image: "/Project/Projet1/Banniere/coverprojet1.png",
-      link: "clear-fashion-product",
-    },
-    {
-      title: "Illustration set for mobile app",
-      company: "Clear Fashion",
-      tags: [{ text: "Illustration", bg: "fp-background-light-purple" }],
-      image: "/Project/Projet2/Banniere/coverprojet2.png",
-      link: "clear-fashion-illustration",
-    },
-  ];
-
+const Home = () => {
   return (
     <Layout>
-      <section className="pt-14">
-        <div className="flex flex-col items-center gap-8 text-center">
-          <div className="flex h-full w-full flex-1 flex-col items-center text-center">
-            <div className="mb-10 w-full flex-1 md:w-[520px]">
-              <Image
-                priority
-                src="/avatarfp.png"
-                width="184px"
-                height="236px"
-                alt="hero"
+      <div className="grid h-full grid-cols-2 grid-rows-[540px] gap-5 md:grid-cols-3 md:grid-rows-[320px]">
+        <div className="surface-tertiary col-span-1 row-span-2 hidden overflow-hidden rounded-2xl sm:flex">
+          <img
+            src="/home/creme/Snapshot_Creme_1.png"
+            alt="Snapshot_Creme_1"
+            className="h-full w-full object-cover"
+          />
+        </div>
+        <div className="surface-tertiary order-first col-span-2 row-span-1 overflow-hidden rounded-2xl md:order-none">
+          <div className="relative flex h-full">
+            <div className="z-10 flex h-0 flex-col items-start justify-between p-6 md:h-full md:p-10">
+              <div className="w-full flex-1 lg:w-1/2">
+                <div className="flex justify-center md:justify-start">
+                  <img
+                    src="/home/creme/creme_icon.png"
+                    alt="icon"
+                    className="h-full w-24 object-fill"
+                  />
+                </div>
+                <h2 className="h2 mt-5 text-center md:text-left">
+                  {"Matching top-tier freelancers with company needs"}
+                </h2>
+              </div>
+              <div className="mt-6 flex w-full justify-center md:justify-start">
+                <Link
+                  href={`/projects/matching-top-tier-freelancers-company-needs`}
+                >
+                  <div>
+                    <ButtonArrowRight />
+                  </div>
+                </Link>
+              </div>
+            </div>
+            <div className="absolute bottom-0 right-0 flex h-full items-end justify-end">
+              <img
+                src={"/home/creme/Creme_Card_Img.png"}
+                alt={"Matching top-tier freelancers with company needs"}
+                className="w-[300px] object-contain"
               />
             </div>
-            <h1 className="h2 md:h1 mb-4 w-full md:w-[520px]">
-              Product illustrator & UI Designer
-            </h1>
-            <h2 className="text-3 md:text2">
-              Creating custom, user-centered digital assets and interfaces ✨
-            </h2>
           </div>
         </div>
-        <div className="grid grid-cols-1 gap-20 pt-40 md:grid-cols-2 md:gap-8">
-          {projects.map((project, index) => (
-            <Link href={`/projects/${project.link}`} key={index}>
-              <a>
-                <CardProject
-                  title={project.title}
-                  company={project.company}
-                  tags={project.tags}
-                  image={project.image}
-                />
-              </a>
-            </Link>
-          ))}
+        <div className="surface-tertiary col-span-1 row-span-1 hidden overflow-hidden rounded-2xl sm:flex">
+          <img
+            src="/home/creme/Snapshot_Creme_2.png"
+            alt="Snapshot_CF_1"
+            className="h-full w-full object-cover"
+          />
         </div>
-        {/* <div className="pt-12 text-center">
-          <span className="cursor-pointer font-title underline">
-            More projects
-          </span>
-        </div> */}
-      </section>
-      <section className="pt-40 md:pt-80">
-        <div className="mb-8 flex flex-col items-center">
-          <h2 className="font-title-bold text-2xl">Services</h2>
+        <div className="surface-tertiary col-span-1 row-span-1 hidden overflow-hidden rounded-2xl sm:flex">
+          <img
+            src="/home/creme/Snapshot_Creme_3.png"
+            alt="Snapshot_CF_1"
+            className="h-full w-full object-cover"
+          />
         </div>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-          <div className="rounded-lg border-4 border-[#25283d]">
-            <div className="fp-background-light-blue h4 border-b-4 border-[#25283d] p-6 text-center">
-              <h3>Digital assets</h3>
-            </div>
-            <div className="flex flex-col gap-4 p-8">
-              {digitalAssets.map((asset) => (
-                <div className="flex items-center" key={asset.title}>
-                  <div className="mr-6 h-20 w-20 rounded-lg">
-                    <img
-                      src={asset.image}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h4 className="text3">{asset.title}</h4>
-                    {asset.description ? (
-                      <span className="text8">{asset.description}</span>
-                    ) : null}
-                  </div>
+        <div className="surface-tertiary col-span-2 row-span-1 h-[540px] rounded-2xl md:h-full">
+          <div className="relative flex h-full">
+            <div className="z-10 flex h-0 flex-col items-start justify-between p-6 md:h-full md:p-10">
+              <div className="w-full flex-1 lg:w-1/2">
+                <div className="flex justify-center md:justify-start">
+                  <img
+                    src="/home/cf/cf_icon.png"
+                    alt="icon"
+                    className="h-full w-24 object-fill"
+                  />
                 </div>
-              ))}
-            </div>
-          </div>
-          <div className="rounded-lg border-4 border-[#25283d]">
-            <div className="fp-background-light-blue h4 border-b-4 border-[#25283d] p-6 text-center">
-              <h3>Interfaces</h3>
-            </div>
-            <div className="flex flex-col gap-4 p-8">
-              {uiDesign.map((asset) => (
-                <div className="flex items-center" key={asset.title}>
-                  <div className="mr-6 h-20 w-20 rounded-lg">
-                    <img
-                      src={asset.image}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
+                <h2 className="h2 mt-5 text-center md:text-left">
+                  {"Solutions for a more sustainable fashion industry"}
+                </h2>
+              </div>
+              <div className="mt-6 flex w-full justify-center md:justify-start">
+                <Link href={`/projects/solutions-sustainable-fashion-industry`}>
                   <div>
-                    <h4 className="text3">{asset.title}</h4>
-                    {asset.description ? (
-                      <span className="text8">{asset.description}</span>
-                    ) : null}
+                    <ButtonArrowRight />
                   </div>
-                </div>
-              ))}
+                </Link>
+              </div>
+            </div>
+            <div className="absolute bottom-0 right-0 flex h-full w-full items-end justify-center md:right-8 md:justify-end">
+              <img
+                src={"/home/cf/CF_Card_Img.png"}
+                alt={"Solutions for a more sustainable fashion industry"}
+                className="w-[180px] object-contain md:w-[240px]"
+              />
             </div>
           </div>
         </div>
-      </section>
-      <section className="flex flex-col items-center gap-8 pt-40 md:flex-row  md:pt-80">
-        <div className="flex-[0.4]">
-          <Image src="/home/photofp.png" width="475" height="552" />
+        <div className="surface-tertiary col-span-1 row-span-2 hidden overflow-hidden rounded-2xl sm:flex">
+          <img
+            src="/home/cf/Snapshot_CF_1.png"
+            alt="Snapshot_CF_1"
+            className="h-full w-full object-cover"
+          />
         </div>
-        <div className="flex-[0.6]">
-          <h2 className="mb-4 font-title-bold text-2xl">
-            Hi — Nice to meet you!
-          </h2>
-          <div className="text1">
-            <p className="mb-4">
-              I’m Fflur Page, a freelance designer and illustrator based in
-              Paris.
-            </p>
-            <p className="mb-4">
-              After graduating from HETIC tech school, I worked as a Product
-              Designer for a french startup. I was involved throughout the full
-              design process from discovering users needs to delivering the best
-              solution to address them. During that time, I got involved in
-              creative tasks and started delivering my first illustrations and
-              UI assets for the company’s products.
-            </p>
-            <p className="mb-4">
-              I fell in love with illustration right away and decided to
-              supplement my skillset so I could work on the multiple creative
-              aspects that make a great interface. Thanks to my background, I
-              always make sure to deliver consistent, scalable assets that will
-              help the product and its users reach their goals.
-            </p>{" "}
-          </div>
+        <div className="surface-tertiary col-span-1 row-span-1 hidden overflow-hidden rounded-2xl sm:flex">
+          <img
+            src="/home/cf/Snapshot_CF_2.png"
+            alt="Snapshot_CF_1"
+            className="h-full w-full object-cover"
+          />
         </div>
-      </section>
-      <section>
-        <div className="flex flex-col items-start gap-8 pt-40 md:flex-row md:pt-80">
-          <div className="fp-background-light-purple flex-1 rounded-2xl px-6 pt-6 pb-16">
-            <span className="inline-flex pb-4 text-[24px]">⭐️</span>
-            <p className="text3">
-              “Working with Fflur was a true pleasure, her mockups, fun
-              illustrations and skills on Figma were massive help to the
-              integration of new features on our Products. Fflur is also a nice
-              person to work with, open minded and reactive. I can only
-              recommend her!”
-            </p>
-            <span className="inline-flex pt-4 font-title text-sm">
-              THIBAUT, FRONT-END DEVELOPER @CLEAR FASHION
-            </span>
-          </div>
-          <div className="fp-background-light-purple flex-1 rounded-2xl px-6 pt-6 pb-16">
-            <span className="inline-flex pb-4 text-[24px]">⭐️</span>
-            <p className="text3">
-              “As a designer, Fflur was able to deliver functional and aesthetic
-              interfaces. She is creative problem solver, her flexibility and
-              efficiency during the design process made her a quality partner.
-              She always has a smile on her face and invests herself in her
-              work.”
-            </p>
-            <span className="inline-flex pt-4 font-title text-sm">
-              JULIETTE, PRODUCT MANAGER @CLEAR FASHION
-            </span>
-          </div>
+        <div className="surface-tertiary col-span-1 row-span-1 hidden overflow-hidden rounded-2xl sm:flex">
+          <img
+            src="/home/cf/Snapshot_CF_3.png"
+            alt="Snapshot_CF_1"
+            className="h-full w-full object-cover"
+          />
         </div>
-      </section>
-      <CTAMail />
+        <div />
+        <div className="text-primary mb-10 mt-40 hidden text-center xl:flex xl:justify-center">
+          © fflur page {new Date().getFullYear()}
+        </div>
+        <div />
+      </div>
     </Layout>
   );
 };

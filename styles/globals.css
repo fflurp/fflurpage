@@ -2,183 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Gordita Bold";
-  src: url("/fonts/Gordita_Bold.otf");
-}
+@layer components {
+  .h1 {
+    @apply text-[40px] font-bold leading-[48px] tracking-[-0.05px];
+  }
 
-@font-face {
-  font-family: "Gordita Medium";
-  src: url("/fonts/Gordita_Medium.otf");
-}
+  .h2 {
+    @apply text-[32px] font-bold leading-[40px] tracking-[-0.05px];
+  }
 
-@font-face {
-  font-family: "Gordita Regular";
-  src: url("/fonts/Gordita_Regular.otf");
-}
+  .h3 {
+    @apply text-[16px] font-semibold leading-[24px] tracking-[-0.05px];
+  }
 
-@font-face {
-  font-family: "SuisseNeue-Light";
-  src: url("/fonts/SuisseNeue-Light.otf");
+  .body-1 {
+    @apply text-[16px] font-normal leading-[24px] tracking-[-0.05px];
+  }
+
+  .body-2 {
+    @apply text-[14px] font-normal leading-[24px] tracking-[-0.05px];
+  }
+
+  .text-button {
+    @apply text-[14px] font-semibold leading-[24px] tracking-[-0.05px];
+  }
+
+  .text-label {
+    @apply text-[14px] font-semibold uppercase leading-[24px] tracking-[-0.05px];
+  }
+
+  .text-primary {
+    @apply text-mountain-700;
+  }
+
+  .text-secondary {
+    @apply text-mountain-600;
+  }
+
+  .surface-primary {
+    @apply bg-mountain-100;
+  }
+
+  .surface-secondary {
+    @apply bg-mountain-200;
+  }
+
+  .surface-tertiary {
+    @apply bg-mountain-300;
+  }
+
+  .border-primary {
+    @apply border-mountain-400;
+  }
 }
 
 @layer base {
   html {
-    font-family: SuisseNeue-Light, system-ui, sans-serif;
-  }
-}
-
-@layer utilities {
-  @responsive {
-    .h1 {
-      font-family: Gordita Bold;
-      font-size: 48px;
-      line-height: 64px;
-    }
-
-    .h2 {
-      font-family: Gordita Bold;
-      font-size: 32px;
-      line-height: 40px;
-    }
-
-    .h3 {
-      font-family: Gordita Bold;
-      font-size: 24px;
-      line-height: 32px;
-    }
-
-    .h4 {
-      font-family: Gordita Bold;
-      font-size: 18px;
-      line-height: 32px;
-    }
-
-    .text1 {
-      font-family: SuisseNeue-Light;
-      font-size: 18px;
-      line-height: 32px;
-    }
-
-    .text2 {
-      font-family: SuisseNeue-Light;
-      font-size: 22px;
-      line-height: 32px;
-    }
-
-    .text3 {
-      font-family: Gordita Medium;
-      font-size: 18px;
-      line-height: 32px;
-    }
-
-    .text4 {
-      font-family: Gordita Medium;
-      font-size: 14px;
-      line-height: 24px;
-    }
-
-    .text5 {
-      font-family: Gordita Medium;
-      font-size: 14px;
-      line-height: 24px;
-      letter-spacing: 1.8px;
-      text-transform: uppercase;
-    }
-
-    .text6 {
-      font-family: Gordita Medium;
-      font-size: 16px;
-      line-height: 24px;
-    }
-
-    .text7 {
-      font-family: Gordita Bold;
-      font-size: 14px;
-      line-height: 24px;
-      letter-spacing: 1.8px;
-    }
-
-    .text8 {
-      font-family: Gordita Regular;
-      font-size: 14px;
-      line-height: 24px;
-    }
-
-    .fp-background-cream {
-      background-color: #fffef9;
-    }
-
-    .fp-text-black {
-      color: #25283d;
-    }
-
-    .fp-background-black {
-      background-color: #25283d;
-    }
-
-    .fp-text-cream {
-      color: #fffef9;
-    }
-
-    .fp-text-bright-blue {
-      color: #92ddff;
-    }
-
-    .fp-text-bright-purple {
-      color: #9ba2ff;
-    }
-
-    .fp-text-bright-pink {
-      color: #f5aff5;
-    }
-
-    .fp-text-bright-green {
-      color: #6dd3cf;
-    }
-
-    .fp-text-bright-yellow {
-      color: #ffd218;
-    }
-
-    .fp-text-bright-orange {
-      color: #fdba93;
-    }
-
-    .fp-text-bright-grey {
-      color: #9ea0af;
-    }
-
-    .fp-text-light-blue {
-      color: #eef9fe;
-    }
-
-    .fp-background-light-blue {
-      background-color: #eef9fe;
-    }
-
-    .fp-background-light-purple {
-      background-color: #f1f2ff;
-    }
-
-    .fp-background-light-pink {
-      background-color: #ffecff;
-    }
-
-    .fp-background-light-green {
-      background-color: #e1f7e5;
-    }
-
-    .fp-background-light-yellow {
-      background-color: #eef9fe;
-    }
-
-    .fp-background-light-orange {
-      background-color: #ffece1;
-    }
-
-    .fp-background-light-grey {
-      background-color: #ebecf2;
-    }
+    font-family: "Inter Variable", sans-serif;
   }
 }
