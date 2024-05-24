@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           sizes="32x32"
           href="/favicon-32x32.png"
         />
-        <title>Fflur Page | Product Designer & illustrator</title>
+        <title>Fflur Page | Product Designer</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Component {...pageProps} />

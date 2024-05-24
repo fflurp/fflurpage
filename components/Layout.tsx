@@ -95,7 +95,7 @@ const SideBarDesktop = () => {
       <div className="flex-1">
         <img src="/Fflur.png" alt="Fflur" className="h-36 w-36" />
         <h2 className="text-secondary h3 pb-4 pt-10">
-          I’m Fflur — Product and System Designer based in Paris
+          I’m Fflur — Product Designer based in Paris
         </h2>
         <p className="body-2 text-secondary">
           After graduating from HETIC tech school, I worked on various products
@@ -128,7 +128,7 @@ const CardMobile = () => {
       <div className="flex flex-1 flex-col items-center justify-center">
         <img src="/Fflur.png" alt="Fflur" className="h-36 w-36" />
         <h2 className="text-secondary h3 pb-4 pt-10">
-          I’m Fflur — Product and System Designer based in Paris
+          I’m Fflur — Product Designer based in Paris
         </h2>
         <p className="body-2 text-secondary">
           After graduating from HETIC tech school, I worked on various products
