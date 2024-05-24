@@ -16,10 +16,10 @@ const gallery = [
   "projet2-7.png",
 ];
 
-const ClearFashionPage = () => {
+const CremeDeLaCremePage = () => {
   return (
     <Layout>
-      <div>
+      <div className="px-0 xl:px-[100px]">
         <button className="mb-6 flex">
           <Link href="/">
             <ArrowLeftIcon />
@@ -68,7 +68,7 @@ const ClearFashionPage = () => {
           had documented on Storybook overtime as a starting point.{" "}
         </p>
       </div>
-      <div className="flex flex-col space-y-5 pb-8 pt-40">
+      <div className="flex flex-col space-y-5 px-0 pb-8 pt-40 xl:px-[100px]">
         <img
           src="/projects/Creme/Creme_1.png"
           className="h-[500px] w-full rounded-lg object-cover"
@@ -104,8 +104,11 @@ const ClearFashionPage = () => {
           className="h-[500px] w-full rounded-lg object-cover"
         />
       </div>
+      <div className="text-primary mb-10 mt-40 hidden text-center xl:flex xl:justify-center">
+        © fflur page {new Date().getFullYear()}
+      </div>
     </Layout>
   );
 };
 
-export default ClearFashionPage;
+export default CremeDeLaCremePage;

@@ -5,16 +5,20 @@ const CardCTA = ({
   title,
   slug,
   img,
+  icon,
 }: {
   title: string;
   slug: string;
   img: string;
+  icon: string;
 }) => {
   return (
     <div className="relative flex h-full">
       <div className="z-10 flex h-full flex-col items-start justify-between p-10">
         <div className="w-2/3 flex-1">
-          <div>logo</div>
+          <div>
+            <img src={icon} alt="icon" className="h-full w-24 object-fill" />
+          </div>
           <h2 className="h2 mt-5">{title}</h2>
         </div>
         <Link href={`/projects/${slug}`}>
@@ -23,8 +27,8 @@ const CardCTA = ({
           </button>
         </Link>
       </div>
-      <div className="absolute bottom-0 right-0 h-full w-1/2">
-        <img src={img} alt={title} className="h-full w-full object-cover" />
+      <div className="absolute bottom-0 right-0 flex h-full items-end justify-end">
+        <img src={img} alt={title} className="w-[240px] object-contain" />
       </div>
     </div>
   );
@@ -42,11 +46,36 @@ const Home = () => {
           />
         </div>
         <div className="surface-tertiary order-first col-span-2 row-span-1 overflow-hidden rounded-2xl md:order-none">
-          <CardCTA
-            title="Matching top-tier freelancers with company needs"
-            slug="matching-top-tier-freelancers-company-needs"
-            img="/home/creme/Creme_Card_Img.png"
-          />
+          <div className="relative flex h-full">
+            <div className="z-10 flex h-full flex-col items-start justify-between p-10">
+              <div className="w-2/3 flex-1">
+                <div>
+                  <img
+                    src="/home/creme/creme_icon.png"
+                    alt="icon"
+                    className="h-full w-24 object-fill"
+                  />
+                </div>
+                <h2 className="h2 mt-5">
+                  {"Matching top-tier freelancers with company needs"}
+                </h2>
+              </div>
+              <Link
+                href={`/projects/matching-top-tier-freelancers-company-needs`}
+              >
+                <button className="rounded-full bg-black px-6 py-3 text-white">
+                  Discover project
+                </button>
+              </Link>
+            </div>
+            <div className="absolute bottom-0 right-0 flex h-full items-end justify-end">
+              <img
+                src={"/home/creme/Creme_Card_Img.png"}
+                alt={"Matching top-tier freelancers with company needs"}
+                className="w-[300px] object-contain"
+              />
+            </div>
+          </div>
         </div>
         <div className="surface-tertiary col-span-1 row-span-1 hidden overflow-hidden rounded-2xl sm:flex">
           <img
@@ -63,11 +92,34 @@ const Home = () => {
           />
         </div>
         <div className="surface-tertiary col-span-2 row-span-1 rounded-2xl">
-          <CardCTA
-            title="Solutions for a more sustainable fashion industry"
-            slug="solutions-sustainable-fashion-industry"
-            img="/home/cf/CF_Card_Img.png"
-          />
+          <div className="relative flex h-full">
+            <div className="z-10 flex h-full flex-col items-start justify-between p-10">
+              <div className="w-2/3 flex-1">
+                <div>
+                  <img
+                    src="/home/cf/cf_icon.png"
+                    alt="icon"
+                    className="h-full w-24 object-fill"
+                  />
+                </div>
+                <h2 className="h2 mt-5">
+                  {"Solutions for a more sustainable fashion industry"}
+                </h2>
+              </div>
+              <Link href={`/projects/solutions-sustainable-fashion-industry`}>
+                <button className="rounded-full bg-black px-6 py-3 text-white">
+                  Discover project
+                </button>
+              </Link>
+            </div>
+            <div className="absolute bottom-0 right-8 flex h-full items-end justify-end">
+              <img
+                src={"/home/cf/CF_Card_Img.png"}
+                alt={"Solutions for a more sustainable fashion industry"}
+                className="w-[240px] object-contain"
+              />
+            </div>
+          </div>
         </div>
         <div className="surface-tertiary col-span-1 row-span-2 hidden overflow-hidden rounded-2xl sm:flex">
           <img
