@@ -62,7 +62,7 @@ const ButtonContactMe = () => {
 
   return (
     <div
-      className="border-primary surface-primary flex w-[250px] cursor-pointer rounded border py-2"
+      className="border-primary surface-primary flex w-[250px] cursor-pointer rounded-full border py-2"
       onClick={copyToClipboard}
     >
       <div className="text-button text-secondary px-4">Contact me</div>

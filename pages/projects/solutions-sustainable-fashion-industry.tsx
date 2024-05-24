@@ -71,43 +71,43 @@ const ClearFashionPage = () => {
       <div className="flex flex-col space-y-5 px-0 pb-8 pt-40 xl:px-[100px]">
         <img
           src="/projects/CF/CF_1.png"
-          className="h-[500px] w-full rounded-lg object-cover"
+          className="h-[159px] w-full rounded-lg object-cover sm:h-[500px]"
         />
-        <div className="flex flex-col space-y-5 xl:flex-row xl:space-x-5 xl:space-y-0">
+        <div className="flex flex-row space-x-5">
           <div className="w-full flex-1 xl:w-1/2">
             <img
               src="/projects/CF/CF_2.png"
-              className="h-[500px] w-full rounded-lg object-cover"
+              className="h-[159px] w-full rounded-lg object-cover sm:h-[500px]"
             />
           </div>
           <div className="w-full flex-1 xl:w-1/2">
             <img
               src="/projects/CF/CF_3.png"
-              className="h-[500px] w-full rounded-lg object-cover"
+              className="h-[159px] w-full rounded-lg object-cover sm:h-[500px]"
             />
           </div>
         </div>
         <img
           src="/projects/CF/CF_4.png"
-          className="h-[500px] w-full rounded-lg object-cover"
+          className="h-[159px] w-full rounded-lg object-cover sm:h-[500px]"
         />
-        <div className="flex flex-col space-y-5 xl:flex-row xl:space-x-5 xl:space-y-0">
+        <div className="flex flex-row space-x-5">
           <div className="w-full flex-1 xl:w-1/2">
             <img
               src="/projects/CF/CF_5.png"
-              className="h-[500px] w-full rounded-lg object-cover"
+              className="h-[159px] w-full rounded-lg object-cover sm:h-[500px]"
             />
           </div>
           <div className="w-full flex-1 xl:w-1/2">
             <img
               src="/projects/CF/CF_6.png"
-              className="h-[500px] w-full rounded-lg object-cover"
+              className="h-[159px] w-full rounded-lg object-cover sm:h-[500px]"
             />
           </div>
         </div>
         <img
           src="/projects/CF/CF_7.png"
-          className="h-[500px] w-full rounded-lg object-cover"
+          className="h-[159px] w-full rounded-lg object-cover sm:h-[500px]"
         />
       </div>
       <div className="text-primary mb-10 mt-40 hidden text-center xl:flex xl:justify-center">
